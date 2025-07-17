@@ -834,7 +834,118 @@
     <!-- 💫 Soft Blob Background -->
     <div class="absolute -top-20 -left-20 w-[380px] h-[380px] bg-[#1a767f]/20 blur-3xl rounded-full animate-blob z-0">
     </div>
+<!-- 💡 Section: Dual Feature Cards + Floating Video Boxes -->
+<section class="relative w-full px-4 md:px-16 py-20 bg-white overflow-visible">
+  <div class="w-full flex flex-col md:flex-row flex-wrap items-stretch justify-center gap-6">
 
+    <!-- 💬 Communication Card -->
+    <div class="flex-[0_0_50%] flex justify-center">
+      <div class="w-full max-w-[480px] min-w-[280px] transition-all duration-1000 ease-in-out" data-animate-on-scroll>
+        <div class="bg-white rounded-2xl font-[Montserrat] border border-gray-200 relative transform hover:scale-[1.03] hover:shadow-[#fff4b8] shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:z-50 transition-all duration-500">
+
+          <!-- Header -->
+          <div class="text-center text-[#1a767f] px-5 py-4">
+            <h3 class="text-lg font-semibold">Multi-channel Communication</h3>
+            <p class="text-sm opacity-90">AI messaging across platforms, real-time.</p>
+          </div>
+
+          <!-- Content -->
+          <div class="bg-[#f9fafb] p-4 space-y-4">
+            
+            <!-- Missed Call Text Back -->
+            <div class="bg-white border border-gray-200 rounded-lg p-3 shadow-md hover:shadow-lg transition-all">
+              <div class="flex items-center gap-2 mb-1">
+                <div class="hidden md:flex gap-[1px]">
+                  <div class="w-[2px] h-3 bg-[#1a767f] rounded animate-vibration1"></div>
+                  <div class="w-[2px] h-4 bg-[#1a767f] rounded animate-vibration2"></div>
+                  <div class="w-[2px] h-2 bg-[#1a767f] rounded animate-vibration3"></div>
+                </div>
+                <p class="text-xs font-semibold text-gray-800">Missed Call Text Back</p>
+              </div>
+              <div class="bg-[#f9fafb] border-l-4 border-[#1a767f] p-1.5 rounded-md shadow-inner animate-slide-in">
+                <p class="text-[11px] text-gray-700 leading-snug">
+                  Your AI voice agent auto-follows up when a caller can't reach you.<br>
+                  <span class="font-medium text-[#1a767f]">You stay connected, even offline.</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Unified Messaging Hub -->
+            <div class="relative bg-white border border-gray-200 rounded-lg px-3 py-3 shadow-md group hover:shadow-xl transition-all">
+              <span class="glow-rail"></span>
+              <div class="relative z-10 space-y-1.5">
+                <h4 class="text-sm font-semibold text-gray-800">Unified Messaging Hub</h4>
+                <p class="text-xs text-gray-600 leading-snug">
+                  Our voice AI responds across every platform — synced, sharp, and always on-brand.
+                </p>
+                <p class="text-[10px] text-gray-400 italic">Fully responsive. Designed for integration.</p>
+                <div class="w-full flex justify-center items-center gap-2 pt-1">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-5 h-5 grayscale opacity-80 hover:scale-105 transition-transform" />
+                  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="w-5 h-5 grayscale opacity-80 hover:scale-105 transition-transform" />
+                  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="w-5 h-5 grayscale opacity-80 hover:scale-105 transition-transform" />
+                  <img src="https://cdn-icons-png.flaticon.com/512/134/134932.png" alt="SMS" class="w-5 h-5 grayscale opacity-80 hover:scale-105 transition-transform" />
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-2">
+              <a href="https://mirajoagency.org/pricing-plan" target="_blank" class="inline-block bg-[#ffcd30] text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-[#e6b800] hover:scale-105 transition">
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📹 Video Box + Floating Info Cards -->
+    <div class="relative w-full flex justify-center items-center" data-animate-on-scroll>
+      <!-- Video Container -->
+      <div class="relative z-10 w-[280px] md:w-[350px] rounded-xl group">
+        <div class="absolute inset-0 rounded-xl group-hover:shadow-[0_0_60px_rgba(26,118,127,0.45)] transition-all pointer-events-none z-0"></div>
+        <video autoplay muted loop playsinline class="w-full h-auto relative z-10 rounded-xl">
+          <source src="videos/aiiimg.mp4" type="video/mp4" />
+          Your browser doesn’t support this video.
+        </video>
+      </div>
+
+      <!-- Floating Box 1 -->
+      <div class="absolute top-[8%] left-[5%] md:top-[10%] md:left-[15%] z-20 w-44 md:w-52 p-3 bg-gradient-to-br from-[#f3f6f8] to-[#e7eff0] border border-gray-300 text-[#0A0A0A] rounded-lg shadow-lg backdrop-blur-sm" data-animate-on-scroll>
+        <p class="font-semibold text-xs">24/7 Agent Coverage</p>
+        <p class="text-[10px] mt-1 leading-snug">Never miss a lead again. Your AI handles it day and night.</p>
+      </div>
+
+      <!-- Floating Box 2 -->
+      <div class="absolute bottom-[40%] right-[5%] md:top-[35%] md:right-[17%] z-20 w-44 md:w-52 p-3 bg-gradient-to-br from-[#f6f6f3] to-[#eae9e4] border border-gray-300 text-[#0A0A0A] rounded-lg shadow-lg backdrop-blur-sm" data-animate-on-scroll>
+        <p class="font-semibold text-xs">Smart Booking + CRM</p>
+        <p class="text-[10px] mt-1 leading-snug">Your appointments run themselves.</p>
+      </div>
+
+      <!-- Floating Box 3 -->
+      <div class="absolute bottom-[10%] left-[10%] md:bottom-[15%] md:left-[20%] z-20 w-44 md:w-52 p-3 bg-gradient-to-br from-[#f0f4f5] to-[#e0eceb] border border-gray-300 text-[#0A0A0A] rounded-lg shadow-lg backdrop-blur-sm" data-animate-on-scroll>
+        <p class="font-semibold text-xs">Cross-Platform Messaging</p>
+        <p class="text-[10px] mt-1 leading-snug">Facebook, IG, WhatsApp, Email handled. Every time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ AOS + Scroll Direction Script -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: false, mirror: true, easing: 'ease-out' });
+
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      document.querySelectorAll('[data-animate-on-scroll]').forEach(el => {
+        el.setAttribute('data-aos', st > lastScrollTop ? 'fade-right' : 'fade-left');
+      });
+      lastScrollTop = st <= 0 ? 0 : st;
+    });
+  </script>
+</section>
     <!-- 🔄 Dual Card Row -->
     <section
         class="w-full flex flex-col md:flex-row flex-wrap items-stretch animjustify-center gap-6 px-4 md:px-20 py-16 bg-white">
