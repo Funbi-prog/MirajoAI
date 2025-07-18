@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiRAjO AI Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hover-glow:hover {
+      box-shadow: 0 0 25px rgba(26, 118, 127, 0.3);
+      transition: box-shadow 0.3s ease;
+    }
+    .teal-shadow {
+      box-shadow: 0 0 20px rgba(26, 118, 127, 0.15);
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animated-card {
+      background-color: #ffffff;
+      color: #1a767f;
+      font-weight: 500;
+      font-size: 0.875rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      animation: softPulse 4s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+    @keyframes softPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: none;
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 12px rgba(26, 118, 127, 0.15);
+      }
+    }
+    .hidden-toggle {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Hero Section -->
+<section class="relative text-center py-20 px-6 bg-cover bg-center text-white" style="background-image: url('https://img.freepik.com/free-photo/contactless-cashless-payment-through-qr-code-mobile-banking_53876-129265.jpg?w=1380');">
+  <div class="bg-black bg-opacity-60 absolute inset-0"></div>
+  <div class="relative z-10 max-w-4xl mx-auto fade-up">
+    <h1 class="text-4xl font-bold mb-4">MiRAjO AI Plans</h1>
+    <p class="text-lg">Human-trained automation for appointment booking and customer inquiries.<br/>Custom Chatbots and Voice Agents, trained by real people and fully integrated with your stack.</p>
+  </div>
+</section>
+
+<hr class="my-10 border-gray-300"/>
+
+<!-- What's Included -->
+<section class="py-12 px-6">
+  <h2 class="text-2xl font-bold text-center mb-6 fade-up">What’s Included in Every Plan</h2>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 fade-up">
+    <div class="animated-card">Human-Trained Chatbot(s)</div>
+    <div class="animated-card">CRM Access</div>
+    <div class="animated-card">Live Chat, SMS, and Email Automation</div>
+    <div class="animated-card">Missed Call Text Back System</div>
+    <div class="animated-card">Calendar Booking Integration</div>
+    <div class="animated-card">Mobile App Access</div>
+    <div class="animated-card">Business Dashboard + Reports</div>
+    <div class="animated-card">1 Language Included (2 in BRILLIANT)</div>
+    <div class="animated-card">GDPR-Compliant Setup</div>
+    <div class="animated-card">Monthly Prompt Support</div>
+  </div>
+</section>
+
+<hr class="my-10 border-gray-300"/>
+
+<!-- Pricing Toggle -->
+<section id="plans" class="py-16 bg-white px-6 relative overflow-hidden">
+  <h2 class="text-3xl font-bold text-center mb-8 fade-up">Choose Your Plan</h2>
+
+  <div class="flex justify-center items-center mb-10">
+    <span class="mr-3 text-sm font-semibold text-gray-600">Monthly</span>
+    <label class="inline-flex relative items-center cursor-pointer">
+      <input type="checkbox" id="planToggle" class="sr-only">
+      <div class="w-11 h-6 bg-gray-300 rounded-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:h-5 after:w-5 after:rounded-full after:transition-all peer-checked:after:translate-x-full peer-checked:bg-teal-500 relative"></div>
+    </label>
+    <span class="ml-3 text-sm font-semibold text-gray-600">Annual</span>
+  </div>
+
+  <!-- Monthly Plans -->
+  <div id="monthlyPlans" class="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto fade-up">
+    <!-- SMART Monthly -->
+    <div class="relative teal-shadow border rounded-xl p-6 bg-white shadow-md text-center transition duration-300">
+      <h3 class="text-2xl font-bold text-teal-700 mb-2">SMART</h3>
+      <p class="text-gray-600 mb-4">$297/month</p>
+      <ul class="text-sm text-gray-700 mb-6 space-y-1 text-left inline-block mx-auto text-start">
+        <li>✔ 1 Human-Trained Chatbot</li>
+        <li>✔ CRM Access</li>
+        <li>✔ Basic Automations</li>
+        <li>✔ Calendar Integration</li>
+        <li>✔ Mobile App</li>
+        <li>✔ 1 Language</li>
+        <li>✔ 2 User Logins</li>
+      </ul>
+      <a href="https://link.fastpaydirect.com/payment-link/681b7b1b78f571bdbc9532fc"
+         class="block bg-[#1a767f] text-white text-center py-2 px-4 rounded-md font-semibold hover-glow">
+        Subscribe – $297
+      </a>
+    </div>
+
+    <!-- GENIUS Monthly -->
+    <div class="relative teal-shadow border rounded-xl p-6 bg-white shadow-md text-center transition duration-300">
+      <h3 class="text-2xl font-bold text-teal-700 mb-2">GENIUS</h3>
+      <p class="text-gray-600 mb-4">$497/month</p>
+      <ul class="text-sm text-gray-700 mb-6 space-y-1 text-left inline-block mx-auto text-start">
+        <li>✔ 2 Chatbots + Multichannel Messaging</li>
+        <li>✔ CRM Workflows</li>
+        <li>✔ Advanced Routing</li>
+        <li>✔ 1 Language</li>
+        <li>✔ 3 User Logins</li>
+      </ul>
+      <a href="https://link.fastpaydirect.com/payment-link/681b7b1778f571560d9532f9"
+         class="block bg-[#1a767f] text-white text-center py-2 px-4 rounded-md font-semibold hover-glow">
+        Subscribe – $497
+      </a>
+    </div>
+
+    <!-- BRILLIANT Monthly -->
+    <div class="relative teal-shadow border rounded-xl p-6 bg-white shadow-md text-center transition duration-300">
+      <h3 class="text-2xl font-bold text-teal-700 mb-2">BRILLIANT</h3>
+      <p class="text-gray-600 mb-4">$997/month</p>
+      <ul class="text-sm text-gray-700 mb-6 space-y-1 text-left inline-block mx-auto text-start">
+        <li>✔ 2 Chatbots + 1 Voice Agent</li>
+        <li>✔ Round-Robin Routing</li>
+        <li>✔ Ongoing Prompt Refinement</li>
+        <li>✔ 2 Languages</li>
+        <li>✔ 4 User Logins</li>
+      </ul>
+      <a href="https://link.fastpaydirect.com/payment-link/681b7d8b741ad1fcd7dc1e32"
+         class="block bg-[#1a767f] text-white text-center py-2 px-4 rounded-md font-semibold hover-glow">
+        Subscribe – $997
+      </a>
+    </div>
+  </div>
+
+  <!-- Annual Plans -->
+  <div id="annualPlans" class="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto fade-up hidden-toggle">
+    <!-- SMART Annual -->
+    <div class="relative teal-shadow border rounded-xl p-6 bg-white shadow-md text-center transition duration-300">
+      <h3 class="text-2xl font-bold text-teal-700 mb-2">SMART</h3>
+      <p class="text-gray-600 mb-4">$3,207/year</p>
+      <ul class="text-sm text-gray-700 mb-6 space-y-1 text-left inline-block mx-auto text-start">
+        <li>✔ All SMART monthly features</li>
+        <li>✔ Save 10%</li>
+      </ul>
+      <a href="https://buy.stripe.com/28o15x5Rm10PfPa6oq"
+         class="block bg-yellow-400 hover:bg-yellow-300 text-teal-900 text-center py-2 px-4 rounded-md font-semibold">
+        Pay $3,207/year
+      </a>
+    </div>
+
+    <!-- GENIUS Annual -->
+    <div class="relative teal-shadow border rounded-xl p-6 bg-white shadow-md text-center transition duration-300">
+      <h3 class="text-2xl font-bold text-teal-700 mb-2">GENIUS</h3>
+      <p class="text-gray-600 mb-4">$4,830/year</p>
+      <ul class="text-sm text-gray-700 mb-6 space-y-1 text-left inline-block mx-auto text-start">
+        <li>✔ All GENIUS monthly features</li>
+        <li>✔ Save 10%</li>
+      </ul>
+      <a href="https://link.fastpaydirect.com/payment-link/681b7d8b741ad1fcd7dc1e32"
+         class="block bg-yellow-400 hover:bg-yellow-300 text-teal-900 text-center py-2 px-4 rounded-md font-semibold">
+        Pay $4,830/year
+      </a>
+    </div>
+
+    <!-- BRILLIANT Annual -->
+    <div class="relative teal-shadow border rounded-xl p-6 bg-white shadow-md text-center transition duration-300">
+      <h3 class="text-2xl font-bold text-teal-700 mb-2">BRILLIANT</h3>
+      <p class="text-gray-600 mb-4">$10,767/year</p>
+      <ul class="text-sm text-gray-700 mb-6 space-y-1 text-left inline-block mx-auto text-start">
+        <li>✔ All BRILLIANT monthly features</li>
+        <li>✔ Save 10%</li>
+      </ul>
+      <a href="https://link.fastpaydirect.com/payment-link/681b7d59082a6f09a9ee4725"
+         class="block bg-yellow-400 hover:bg-yellow-300 text-teal-900 text-center py-2 px-4 rounded-md font-semibold">
+        Pay $10,767/year
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Script for Toggle -->
+<script>
+  const toggle = document.getElementById('planToggle');
+  const monthly = document.getElementById('monthlyPlans');
+  const annual = document.getElementById('annualPlans');
+
+  toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+      monthly.classList.add('hidden-toggle');
+      annual.classList.remove('hidden-toggle');
+    } else {
+      annual.classList.add('hidden-toggle');
+      monthly.classList.remove('hidden-toggle');
+    }
+  });
+</script>
+
+</body>
+</html>
