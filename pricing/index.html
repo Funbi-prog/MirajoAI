@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiRAjO AI Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --pastel-yellow: #F9E79F;
+      --brand-teal: #1A767F;
+      --pastel-purple: #D7BDE2;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.8s ease forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="img/logo.png" alt="MirajoAI Logo"
+          class="h-20 w-20 object-contain shadow-none bg-transparent border-none"
+          style="background: transparent; box-shadow: none; border: none;" />
+      </div>
+
+      <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-[var(--brand-teal)] transition">Home</a>
+        <a href="https://home.mirajoco.org/" class="hover:text-[var(--brand-teal)] transition">MiRAjO Collective</a>
+        <a href="https://login.mirajoagency.org/" class="hover:text-[var(--brand-teal)] transition">Client Login</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+      <a href="index.html" class="block px-6 py-3 font-medium hover:bg-gray-50">Home</a>
+      <a href="https://home.mirajoco.org/" class="block px-6 py-3 font-medium hover:bg-gray-50">MiRAjO Collective</a>
+      <a href="https://login.mirajoagency.org/" class="block px-6 py-3 font-medium hover:bg-gray-50">Client Login</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section
+    class="relative text-center py-24 px-6 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--pastel-yellow)] overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-72 h-72 bg-white/20 rounded-full mix-blend-overlay"></div>
+    <div class="relative z-10 max-w-3xl mx-auto fade-up">
+      <h1 class="text-4xl font-extrabold text-white mb-4">Simple Pricing. Powerful Results.</h1>
+      <p class="text-lg text-white/90 mb-8">
+        Pick the plan that fits your business and get setup, support, and smart AI automations up and running today.
+      </p>
+      <a href="#monthlyPlans"
+        class="inline-block bg-white text-[var(--brand-teal)] font-semibold px-8 py-3 rounded-full hover:scale-105 transition">
+        View Plans
+      </a>
+    </div>
+  </section>
+
+  <hr class="my-10 border-gray-300" />
+
+  <!-- All Plans Include -->
+  <section class="py-12 px-6 bg-white">
+    <h2
+      class="text-4xl font-bold text-center text-gray-700 mb-8 opacity-0 translate-y-5 animate-[fadeUp_0.8s_ease_forwards]">
+      All Plans Include
+    </h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" stroke-width="2" />
+          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-sm text-gray-800 font-medium">Answer every call, 24/7</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" stroke-width="2" />
+          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-sm text-gray-800 font-medium">Book appointments automatically</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" stroke-width="2" />
+          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-sm text-gray-800 font-medium">Custom greetings and responses</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" stroke-width="2" />
+          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-sm text-gray-800 font-medium">FAQ handling (hours, pricing, availability)</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" stroke-width="2" />
+          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-sm text-gray-800 font-medium">Works with your current number</p>
+      </div>
+      <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" stroke-width="2" />
+          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-sm text-gray-800 font-medium">Setup + onboarding included</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toggle -->
+  <div class="flex justify-center items-center mb-12">
+    <span class="text-gray-600 font-medium mr-4">Monthly</span>
+    <label class="relative inline-block w-14 h-8">
+      <input type="checkbox" id="planToggle" class="sr-only peer">
+      <div
+        class="absolute inset-0 rounded-full bg-[var(--pastel-yellow)] transition peer-checked:bg-[var(--brand-teal)]">
+      </div>
+      <div class="absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition peer-checked:left-[calc(100%-1.5rem)]">
+      </div>
+    </label>
+    <span class="text-gray-600 font-medium ml-4">Annual</span>
+  </div>
+
+  <!-- Monthly Plans -->
+  <div id="monthlyPlans" class="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 fade-up">
+
+    <!-- Smart Plan -->
+    <!-- Smart Plan -->
+    <div
+      class="w-full sm:max-w-md mx-auto bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
+      <h3 class="flex items-center text-2xl font-bold text-[var(--brand-teal)] mb-2">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)] mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Smart
+      </h3>
+      <p class="text-4xl font-bold text-gray-800 mb-2">$297<span class="text-base font-normal">/mo</span></p>
+      <p class="text-gray-600 mb-6">For solo and small businesses</p>
+      <ul class="space-y-3 mb-8 text-gray-700">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          1 location
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Bilingual support (English + 1)
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Missed call text back
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          SMS & email automations
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Live chat included
+        </li>
+      </ul>
+      <a href="https://link.fastpaydirect.com/payment-link/681b7b1b78f571bdbc9532fc"
+        class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">
+        Get Started
+      </a>
+    </div>
+
+    <!-- Genius Plan -->
+    <div
+      class="relative w-full sm:max-w-md mx-auto bg-white rounded-3xl shadow-lg p-8 border-4 border-indigo-600 transition hover:shadow-2xl">
+      <div
+        class="absolute -top-5 left-1/2 transform -translate-x-1/2 flex items-center gap-2 bg-white px-4 py-1 border border-indigo-600 rounded-full text-indigo-600 font-semibold text-sm shadow">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)]" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Most Popular
+      </div>
+      <h3 class="flex items-center text-2xl font-bold text-indigo-700 mb-2 mt-4">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)] mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Genius
+      </h3>
+      <p class="text-4xl font-bold text-gray-800 mb-2">$497<span class="text-base font-normal">/mo</span></p>
+      <p class="text-gray-600 mb-6">For growing teams and busy schedules</p>
+      <ul class="space-y-3 mb-8 text-gray-700">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Everything in Smart
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          2 AI agents
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Social media replies (e.g. Facebook)
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Customizable workflows
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Priority support
+        </li>
+      </ul>
+      <a href="https://buy.stripe.com/9B6eVdalr6jVecb7ajfEk0p"
+        class="block bg-indigo-600 text-white font-semibold text-center py-3 rounded-xl hover:bg-indigo-700 transition">
+        Start with Genius
+      </a>
+    </div>
+
+    <!-- Brilliant Plan -->
+    <div
+      class="w-full sm:max-w-md mx-auto bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
+      <h3 class="flex items-center text-2xl font-bold text-[var(--brand-teal)] mb-2">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)] mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Brilliant
+      </h3>
+      <p class="text-4xl font-bold text-gray-800 mb-2">$997<span class="text-base font-normal">/mo</span></p>
+      <p class="text-gray-600 mb-6">For multi-location or high-traffic businesses</p>
+      <ul class="space-y-3 mb-8 text-gray-700">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Everything in Genius
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Voice receptionist included
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Unlimited workflows & integrations
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Dedicated account support
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Full analytics dashboard
+        </li>
+      </ul>
+      <a href="https://buy.stripe.com/cNibJ12SZfUv3xxdyHfEk0r"
+        class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">
+       I Want Brilliant
+      </a>
+    </div>
+
+  </div>
+  <!-- Annual Plans (hidden by default) -->
+  <div id="annualPlans" class="hidden max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 fade-up">
+
+    <!-- Smart Annual -->
+    <div
+      class="w-full sm:max-w-md mx-auto bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
+      <h3 class="flex items-center text-2xl font-bold text-[var(--brand-teal)] mb-2">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)] mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Smart
+      </h3>
+      <p class="text-4xl font-bold text-gray-800 mb-2">$3,207<span class="text-base font-normal">/yr</span></p>
+      <p class="text-gray-600 mb-4">Save 10% vs. monthly</p>
+      <ul class="space-y-3 mb-8 text-gray-700">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          1 Human-Trained Chatbot
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          CRM Access
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Live Chat, SMS & Email
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Calendar Booking Integration
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Missed Call Text Back
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Dashboard + Mobile App
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          1 Language
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          2 User Logins
+        </li>
+      </ul>
+      <a href="https://buy.stripe.com/28E8wP5179w75FF66ffEk0l"
+        class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">
+        Get Started
+      </a>
+    </div>
+
+    <!-- Genius Annual -->
+    <div
+      class="relative w-full sm:max-w-md mx-auto bg-white rounded-3xl shadow-lg p-8 border-4 border-indigo-600 transition hover:shadow-2xl">
+      <div
+        class="absolute -top-5 left-1/2 transform -translate-x-1/2 flex items-center gap-2 bg-white px-4 py-1 border border-indigo-600 rounded-full text-indigo-600 font-semibold text-sm shadow">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)]" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Most Popular
+      </div>
+      <h3 class="flex items-center text-2xl font-bold text-indigo-700 mb-2 mt-4">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)] mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Genius
+      </h3>
+      <p class="text-4xl font-bold text-gray-800 mb-2">$4,830<span class="text-base font-normal">/yr</span></p>
+      <p class="text-gray-600 mb-4">Save 10% vs. monthly</p>
+      <ul class="space-y-3 mb-8 text-gray-700">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          2 Human-Trained Chatbots
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Multichannel Messaging
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          CRM Segmentation + Advanced Workflow Automation
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Calendar Booking + CRM Routing
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Mobile App + Reporting
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          1 Language
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          3 User Logins
+        </li>
+      </ul>
+      <a href="https://buy.stripe.com/3cIcN59hn23F0llcuDfEk0o"
+        class="block bg-indigo-600 text-white font-semibold text-center py-3 rounded-xl hover:bg-indigo-700 transition">
+        Start with Genius
+      </a>
+    </div>
+
+
+    <!-- Brilliant Annual -->
+    <div
+      class="w-full sm:max-w-md mx-auto bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
+      <h3 class="flex items-center text-2xl font-bold text-[var(--brand-teal)] mb-2">
+        <svg class="w-5 h-5 text-[var(--pastel-yellow)] mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L19 12L12 22L5 12L12 2Z" />
+        </svg>
+        Brilliant
+      </h3>
+      <p class="text-4xl font-bold text-gray-800 mb-2">$10,767<span class="text-base font-normal">/yr</span></p>
+      <p class="text-gray-600 mb-4">Save 10% vs. monthly</p>
+      <ul class="space-y-3 mb-8 text-gray-700">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          2 Human-Trained Chatbots
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          1 AI Voice Agent (Inbound)
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Multichannel Messaging
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Ongoing Prompt Refinement
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Workflow Consulting + Strategy Sessions
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Priority Support Line
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          2 Languages
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[var(--brand-teal)]" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 12l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          4 User Logins
+        </li>
+      </ul>
+      <a href="https://buy.stripe.com/8x23cv3X3cIj5FFeCLfEk0q"
+        class=" block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90
+        transition">
+      I Want Brilliant
+      </a>
+    </div>
+  </div>
+<!-- Add-Ons Section -->
+<section class="py-16 px-6 bg-white fade-up">
+  <div class="max-w-5xl mx-auto text-center mb-10">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Customize Your Plan</h2>
+    <p class="text-gray-600 text-lg">Enhance your experience with optional add-ons designed for flexibility and scale.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <!-- Additional Users -->
+    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <h3 class="text-xl font-semibold text-[var(--brand-teal)] mb-2">Additional Users</h3>
+      <p class="text-gray-700 mb-2 text-sm">Add extra users to your team and expand access across roles.</p>
+      <p class="text-gray-900 font-bold text-lg">$5<span class="text-sm font-medium text-gray-600"> /mo per user</span></p>
+    </div>
+
+    <!-- Additional Languages -->
+    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <h3 class="text-xl font-semibold text-[var(--brand-teal)] mb-2">Additional Languages</h3>
+      <p class="text-gray-700 mb-2 text-sm">Offer service in more languages. Support up to 7: English, Brazilian Portuguese, Spanish, French, German, Italian, and Dutch.</p>
+      <p class="text-gray-900 font-bold text-lg">$50<span class="text-sm font-medium text-gray-600"> /mo per language</span></p>
+    </div>
+
+    <!-- HIPAA Compliance -->
+    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+      <h3 class="text-xl font-semibold text-[var(--brand-teal)] mb-2">HIPAA Compliance</h3>
+      <p class="text-gray-700 mb-2 text-sm">Secure your data for healthcare and related industries. Applies per chatbot or voice agent.</p>
+      <p class="text-gray-900 font-bold text-lg">$450<span class="text-sm font-medium text-gray-600"> /mo per agent</span></p>
+    </div>
+  </div>
+</section>
+<!-- Plan Comparison Section -->
+<section class="py-16 bg-white fade-up px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Plan Comparison</h2>
+    <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-md">
+      <table class="min-w-full text-sm text-left text-gray-800 table-auto">
+        <thead class="bg-gray-50 border-b border-gray-200">
+          <tr>
+            <th class="px-4 py-4 text-base font-semibold">Feature</th>
+            <th class="px-4 py-4 text-center text-[var(--brand-teal)] font-semibold">Smart</th>
+            <th class="px-4 py-4 text-center text-indigo-600 font-semibold">Genius</th>
+            <th class="px-4 py-4 text-center text-[var(--brand-teal)] font-semibold">Brilliant</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <tr><td class="px-4 py-3">Monthly Price</td><td class="text-center">$297</td><td class="text-center">$497</td><td class="text-center">$997</td></tr>
+          <tr><td class="px-4 py-3">Annual Price (10% Off)</td><td class="text-center">$3,207</td><td class="text-center">$4,830</td><td class="text-center">$10,767</td></tr>
+          <tr><td class="px-4 py-3">Human-Trained Chatbots</td><td class="text-center">1</td><td class="text-center">2</td><td class="text-center">2</td></tr>
+          <tr><td class="px-4 py-3">AI Voice Agent</td><td class="text-center text-gray-400">—</td><td class="text-center text-gray-400">—</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">CRM Access</td><td class="text-center">✔</td><td class="text-center">✔</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">Multichannel Messaging</td><td class="text-center text-gray-400">—</td><td class="text-center">✔</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">Calendar Booking Integration</td><td class="text-center">✔</td><td class="text-center">✔</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">Round-Robin Calendar Routing</td><td class="text-center text-gray-400">—</td><td class="text-center text-gray-400">—</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">Prompt Refinement</td><td class="text-center">Light</td><td class="text-center">Light</td><td class="text-center">Ongoing</td></tr>
+          <tr><td class="px-4 py-3">Workflow Strategy & Consulting</td><td class="text-center text-gray-400">—</td><td class="text-center text-gray-400">—</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">Languages Included</td><td class="text-center">1</td><td class="text-center">1</td><td class="text-center">2</td></tr>
+          <tr><td class="px-4 py-3">Mobile App Access</td><td class="text-center">✔</td><td class="text-center">✔</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">User Logins</td><td class="text-center">2</td><td class="text-center">3</td><td class="text-center">4</td></tr>
+          <tr><td class="px-4 py-3">GDPR Compliant</td><td class="text-center">✔</td><td class="text-center">✔</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">HIPAA Ready (Add-On)</td><td class="text-center">✔</td><td class="text-center">✔</td><td class="text-center">✔</td></tr>
+          <tr><td class="px-4 py-3">Priority Support Line</td><td class="text-center text-gray-400">—</td><td class="text-center text-gray-400">—</td><td class="text-center">✔</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+  <script>
+    // mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    // plan toggle
+    document.getElementById('planToggle').addEventListener('change', () => {
+      document.getElementById('monthlyPlans').classList.toggle('hidden');
+      document.getElementById('annualPlans').classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Help Section -->
+  <section class="py-16 fade-up">
+    <h2 class="text-4xl font-light text-center mb-6">Need help deciding?</h2>
+    <div class="flex justify-center items-center space-x-4">
+      <a href="tel:+17274859941">
+        <button
+          class="group bg-[var(--pastel-yellow)] text-black px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-[#e6b800] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_#ffcd30aa] flex items-center gap-2">
+          Call +1 (727) 485‑9941
+          <svg
+            class="w-4 h-4 transform -rotate-45 transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-1"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </a>
+      <a href="#">
+        <button
+          class="group bg-[var(--brand-teal)] text-white px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-[#166963] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_1a767faa] flex items-center gap-2">
+          Request a free walkthrough
+          <svg
+            class="w-4 h-4 transform -rotate-45 transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-1"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="mt-16 w-full bg-gray-50 py-8">
+    <div class="max-w-3xl mx-auto flex flex-col items-center justify-center text-center gap-4">
+      <!-- Social + Email Icons -->
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/mirajobrands?igsh=djZ4ZnJpeW9kcWly&utm_source=qr" target="_blank"
+          rel="noopener noreferrer" class="hover:text-[var(--brand-teal)] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 
+                 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2
+                 c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7
+                 c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zM12 7
+                 c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5
+                 -2.2-5-5-5zm0 2c1.7 0 3 1.3 3 3s-1.3 3-3 3
+                 -3-1.3-3-3 1.3-3 3-3zm4.5-2a1 1 0 100 2
+                 1 1 0 000-2z" />
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/mirajocollective/" target="_blank" rel="noopener noreferrer"
+          class="hover:text-[var(--brand-teal)] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 
+                 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98
+                 h5V24H0V8.98zM7.5 8.98H12v2.08h.07
+                 c.62-1.17 2.13-2.4 4.43-2.4 4.74 0 5.61 3.1 
+                 5.61 7.13V24H17v-6.65c0-1.59-.03-3.64-2.22-3.64
+                 -2.22 0-2.56 1.73-2.56 3.52V24H7.5V8.98z" />
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/mirajocollective" target="_blank" rel="noopener noreferrer"
+          class="hover:text-[var(--brand-teal)] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.675 0H1.326C.593 0 0 .593 
+                 0 1.326v21.348C0 23.406.593 24 
+                 1.326 24H12.82v-9.294H9.692V11.13
+                 h3.127V8.41c0-3.1 1.893-4.788 
+                 4.659-4.788 1.325 0 2.464.099 
+                 2.796.143v3.24l-1.919.001c
+                 -1.504 0-1.796.715-1.796 1.763v2.312
+                 h3.587l-.467 3.576h-3.12V24h6.116
+                 C23.406 24 24 23.406 24 22.674
+                 V1.326C24 .593 23.406 0 22.675 0z" />
+          </svg>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/17274859941" target="_blank" rel="noopener noreferrer"
+          class="hover:text-[var(--brand-teal)] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.52 3.48A11.87 11.87 0 0012.03 0
+                 a11.94 11.94 0 00-10.34 17.67L0 24l6.51
+                 -1.68A11.94 11.94 0 0012.03 24
+                 a11.87 11.87 0 008.49-20.52zM12.03 22
+                 c-1.77 0-3.52-.47-5.03-1.34l-.36-.21
+                 -3.86.99 1.03-3.76-.23-.38A9.94 9.94 0 1122 12
+                 c0 5.51-4.48 10-9.97 10zm5.51-7.57
+                 c-.3-.15-1.75-.86-2.02-.95
+                 -.27-.1-.47-.15-.67.15s-.77.95
+                 -.94 1.15-.35.22-.65.08a8.03 8.03 0
+                 01-2.4-1.48 9.12 9.12 0 01-1.69-2.12
+                 c-.18-.3 0-.46.14-.61.15-.15.3-.35
+                 .45-.52.15-.18.2-.3.3-.5.1-.2
+                 .05-.37-.03-.52s-.67-1.6-.92-2.2
+                 c-.24-.58-.5-.5-.67-.5l-.57-.01
+                 c-.2 0-.52.07-.8.37-.27.3-1.06
+                 1.04-1.06 2.53s1.09 2.94 1.25
+                 3.14c.15.2 2.14 3.3 5.2 4.63
+                 .73.32 1.3.51 1.75.65.74.24
+                 1.42.2 1.95.12.6-.09 1.75-.72
+                 2-1.42.24-.7.24-1.3.18-1.42
+                 -.05-.12-.27-.2-.57-.35z" />
+          </svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:hello@ai.mirajoco.org" class="hover:text-[var(--brand-teal)] transition">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.2
+                 l-10 6.25L2 5.2V4zm0 3.8v12.2a2 2 0 
+                 002 2h16a2 2 0 002-2V7.8l-10 6.25L2 7.8z" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-sm text-gray-500 mt-4">
+        &copy; 2025 Mirajo Collective. All rights reserved.
+      </div>
+    </div>
+  </footer>
