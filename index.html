@@ -111,7 +111,7 @@
 <body class="bg-white text-black">
 
     <!-- ✅ NAVBAR START -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm transition-all duration-300 ease-in-out">
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center space-x-3">
@@ -124,7 +124,7 @@
             <nav class="space-x-8 hidden md:flex text-black text-base font-light">
                 <a href="pricing.html" target="_blank"
                     class="hover:text-[#1a767f] transition-colors duration-200">Pricing</a>
-                <a href="https://mirajo.netlify.app/" class="hover:text-[#1a767f] transition-colors duration-200">MiRAjO
+                <a href="https://home.mirajoco.org/" class="hover:text-[#1a767f] transition-colors duration-200">MiRAjO
                     Collective</a>
                 <a href="https://login.mirajoagency.org/" target="_blank"
                     class="hover:text-[#1a767f] transition-colors duration-200">Client Login</a>
@@ -146,58 +146,127 @@
             <a href="pricing.html" target="_blank" class="block hover:text-[#1a767f] transition">Pricing</a>
             <a href="https://login.mirajoagency.org/" target="_blank"
                 class="block hover:text-[#1a767f] transition">Client Login</a>
-            <a href="https://mirajo.netlify.app/" class="block hover:text-[#1a767f] transition">MiRAjO Collective</a>
+            <a href="https://home.mirajoco.org/" class="block hover:text-[#1a767f] transition">MiRAjO Collective</a>
         </div>
 
     </header>
     <!-- ✅ NAVBAR END -->
+    <section
+        class="relative w-full bg-white text-black overflow-hidden min-h-screen flex items-center justify-center px-6 py-24">
 
-<section class="relative w-full min-h-[60vh] md:h-[80vh] overflow-hidden bg-black">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-7xl items-center">
 
-  <!-- 🎥 Background Video -->
-  <video autoplay muted loop playsinline
-    class="absolute inset-0 w-full h-full object-cover opacity-40 z-0">
-    <source src="videos/vooi.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+            <!-- 💬 LEFT SIDE: Text & CTA -->
+            <div class="text-left max-w-xl">
+                <h1 class="text-3xl md:text-5xl font-semibold leading-tight tracking-tight breathe">
+                    Never Miss a <br>
+                    Customer Call Again
+                </h1>
+                <p class="mt-4 text-base md:text-lg text-gray-700">
+                    Your phone assistant handles customer calls, books appointments, and answers FAQs — even after
+                    hours.
+                </p>
+                <a href="tel:+17274859941" class="inline-block mt-6">
+                    <button
+                        class="group bg-[#ffcd30] text-black px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-[#e6b800] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_#ffcd30aa] flex items-center gap-2">
+                        Call +1 (727) 485-9941
+                        <svg class="ml-1 w-4 h-4 transform rotate-[-45deg] transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-1"
+                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </a>
+            </div>
 
-  <!-- 🌌 Glow Effects -->
-  <div class="absolute inset-0 z-[1] pointer-events-none">
-    <div class="absolute top-[-20%] left-[-20%] w-[50vw] h-[50vw] bg-[#1a767f] opacity-20 rounded-full blur-[120px]"></div>
-    <div class="absolute bottom-[-20%] right-[-20%] w-[50vw] h-[50vw] bg-[#ffcd30] opacity-20 rounded-full blur-[120px]"></div>
-  </div>
+            <!-- 🤖 RIGHT SIDE: Video + Chat -->
+            <div class="flex flex-col gap-6 w-full max-w-2xl">
 
-  <!-- ✨ Starfield -->
-  <canvas id="starfield" class="absolute inset-0 w-full h-full z-[2] pointer-events-none"></canvas>
+                <!-- 🎥 Video Box -->
+                <div
+                    class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-white/20 backdrop-blur-lg bg-white/10 fadeIn">
+                    <div class="aspect-video w-full h-full">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover rounded-3xl">
+                            <source src="videos/call.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="absolute inset-0 bg-black/30 pointer-events-none rounded-3xl"></div>
+                </div>
 
-  <!-- 💬 Content Over Video -->
-  <div class="relative z-10 flex flex-col justify-center items-center text-white px-4 text-center py-24 md:py-32"
-    data-aos="fade-up">
-    <h1 class="text-2xl md:text-4xl font-semibold text-white mb-6 leading-snug animate-breathe">
-      Never Miss a <br>
-      Customer Call Again
-    </h1>
+                <!-- 💬 Chat UI Box -->
+                <div
+                    class="relative w-full max-w-md rounded-xl shadow-lg border border-white/20 bg-white/10 backdrop-blur-md fadeIn overflow-hidden text-sm">
 
-    <a href="tel:+17274859941">
-      <button
-        class="group bg-[#ffcd30] text-black px-6 py-3 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-[#e6b800] hover:scale-105 transition-transform duration-300">
-        Call +1 (727) 485-9941
-        <svg class="ml-1 w-4 h-4 transform rotate-[-45deg] transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-1"
-          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-      </button>
-    </a>
-  </div>
+                    <!-- Chat Header -->
+                    <div class="bg-[#1a767f] text-white px-4 py-2 flex items-center justify-between">
+                        <span class="font-medium">MiraBot</span>
+                        <span class="text-xs text-white/80">Online</span>
+                    </div>
 
-</section>
+                    <!-- Chat Body -->
+                    <div class="px-4 py-4 space-y-2 text-gray-900 bg-white">
+                        <div class="bg-gray-100 px-3 py-2 rounded-xl w-fit max-w-[80%]">
+                            👋 Hello! Need help booking or checking an appointment?
+                        </div>
+                        <div class="bg-[#ffefb3] px-3 py-2 rounded-xl w-fit max-w-[80%] ml-auto">
+                            Yes, can I schedule a call for tomorrow?
+                        </div>
+                        <div class="bg-gray-100 px-3 py-2 rounded-xl w-fit max-w-[80%]">
+                            Absolutely! What time works best for you?
+                        </div>
+                        <div class="text-center text-xs text-gray-400 pt-2">Powered by MiRAjO AI</div>
+                    </div>
+                </div>
 
-    <div class="relative z-10 mt-8 md:mt-16">
+
+            </div>
+        </div>
+
+        <!-- 👇 Animations Inline (No Tailwind config needed) -->
+        <style>
+            .breathe {
+                animation: breathe 4s ease-in-out infinite;
+            }
+
+            .fadeIn {
+                animation: fadeIn 1.8s ease-in-out forwards;
+            }
+
+            @keyframes breathe {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                50% {
+                    transform: scale(1.03);
+                    opacity: 0.85;
+                }
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+
+    </section>
+
+    <div class="relative z-10 mt-4 md:mt-8">
 
         <!-- 🔤 TYPEWRITER SECTION -->
-        <section class="relative bg-white px-6 md:px-20 py-16 text-center">
-            <div class="max-w-4xl mx-auto space-y-10">
+        <section class="relative bg-white px-4 md:px-12 py-8 text-center">
+            <div class="max-w-4xl mx-auto space-y-6">
 
                 <!-- ✍🏽 Animated Typing Header -->
                 <div class="text-center">
@@ -209,694 +278,518 @@
                     </p>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-3 p-3">
-                    <!-- Box 1: Phone -->
+            </div>
+        </section>
+    </div>
+
+
+    <div class="flex flex-wrap justify-center gap-3 p-3">
+        <!-- Box 1: Phone -->
+        <div class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
+            <svg class="w-6 h-6 text-teal-600 animate-call mb-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2A19.8 19.8 0 013.1 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.2 1.38.76 2.72 1.64 3.86a2 2 0 01-.45 2.82l-1.27 1.27a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.82-.45c1.14.88 2.48 1.44 3.86 1.64A2 2 0 0122 16.92z" />
+            </svg>
+            <p class="font-semibold text-xs text-black leading-tight">While You Work...</p>
+            <p class="text-[10px] text-black leading-tight">Our assistant answers every call.</p>
+        </div>
+
+        <!-- Box 2: Clock -->
+        <div class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
+            <svg class="w-6 h-6 text-teal-600 animate-tick mb-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <p class="font-semibold text-xs text-black leading-tight">Book Appointments</p>
+            <p class="text-[10px] text-black leading-tight">Even when you are closed.
+            </p>
+        </div>
+
+        <!-- Box 3: SMS -->
+        <div class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
+            <svg class="w-6 h-6 text-teal-600 mb-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            <p class="font-bold text-xs text-black uppercase leading-tight">Answers FAQs</p>
+            <p class="text-[10px] text-black leading-tight">Like store hours, pricing, availability.</p>
+        </div>
+
+        <!-- Box 4: Settings -->
+        <div class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
+            <svg class="w-6 h-6 text-teal-600 animate-spin-slow mb-1" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                    d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09c0 .66.39 1.26 1 1.51a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c0 .66.39 1.26 1 1.51H21a2 2 0 110 4h-.09c-.66 0-1.26.39-1.51 1z" />
+            </svg>
+            <p class="font-semibold text-xs text-black leading-tight">We set it up</p>
+            <p class="text-[10px] text-black leading-tight">You don’t need any tech skills.</p>
+        </div>
+    </div>
+
+    <!-- Custom Animations -->
+    <style>
+        @keyframes spin-slow {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 4s linear infinite;
+        }
+
+        @keyframes call-vibrate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            20% {
+                transform: rotate(10deg);
+            }
+
+            40% {
+                transform: rotate(-10deg);
+            }
+
+            60% {
+                transform: rotate(6deg);
+            }
+
+            80% {
+                transform: rotate(-6deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .animate-call {
+            animation: call-vibrate 1s infinite;
+        }
+
+        @keyframes tick {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(15deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .animate-tick {
+            animation: tick 2s ease-in-out infinite;
+            transform-origin: center;
+        }
+    </style>
+
+    </div>
+    <!-- 🟡 CTA Button (Centered + Enhanced) -->
+    <div class="flex justify-center mt-6">
+        <a href="tel:+17274859941">
+            <button
+                class="bg-[#ffcd30] text-white text-base font-semibold animate-bounce px-8 py-3 rounded-full shadow-lg hover:bg-[#e6b800] hover:scale-105 transition-all duration-300">
+                Book a Demo
+            </button>
+        </a>
+    </div>
+
+
+
+    </section>
+
+    <!-- ✨ STYLE & SCRIPT: IN-BLOCK -->
+    <style>
+        @keyframes blinkCursor {
+
+            0%,
+            100% {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: #4B5563;
+            }
+
+            /* Tailwind gray-700 */
+        }
+
+        #typewriter {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: blinkCursor 1s step-end infinite;
+        }
+    </style>
+
+    <script>
+        const el = document.getElementById('typewriter');
+        const text = "How Can We Help Your Business?";
+        let typingInterval; // Store interval so we can clear it
+
+        const typeWriter = () => {
+            el.textContent = '';
+            let i = 0;
+            const speed = 40;
+
+            const type = () => {
+                if (i < text.length) {
+                    el.textContent += text.charAt(i);
+                    i++;
+                    typingInterval = setTimeout(type, speed);
+                }
+            };
+            type();
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    clearTimeout(typingInterval); // Avoid overlap if scrolling fast
+                    typeWriter();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(el);
+    </script>
+    <!-- ✅ Modal Container (Initially hidden) -->
+    <div id="demoFormModal" class="fixed inset-0 z-[9999] bg-black/50 hidden items-center justify-center">
+        <div class="relative w-[95%] max-w-3xl mx-auto bg-white rounded-lg p-4 md:p-6">
+            <!-- ❌ Close Button -->
+            <button id="closeDemoFormBtn"
+                class="absolute top-4 right-4 text-gray-600 text-2xl font-bold hover:text-black">
+                &times;
+            </button>
+
+            <!-- 🧩 Embedded Form -->
+            <iframe src="https://api.leadconnectorhq.com/widget/form/ugRWgZyGNmk4kFNN80Ml"
+                style="width:100%; height:694px; border:none; border-radius:3px;" id="popup-ugRWgZyGNmk4kFNN80Ml"
+                data-layout="{'id':'POPUP'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated"
+                data-deactivation-type="neverDeactivate" data-form-name="Request A Demo"
+                data-layout-iframe-id="popup-ugRWgZyGNmk4kFNN80Ml" data-form-id="ugRWgZyGNmk4kFNN80Ml"
+                title="Request A Demo"></iframe>
+        </div>
+    </div>
+
+    <!-- ✅ Script Dependencies -->
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+    <script>
+        const openBtn = document.getElementById("openDemoFormBtn");
+        const closeBtn = document.getElementById("closeDemoFormBtn");
+        const modal = document.getElementById("demoFormModal");
+
+        openBtn.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+            document.body.style.overflow = "hidden"; // lock scroll
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.add("hidden");
+            document.body.style.overflow = ""; // unlock scroll
+        });
+    </script>
+
+    <section class="w-full flex flex-col md:flex-row items-stretch justify-center gap-6 px-4 md:px-20 py-16 bg-white">
+
+        <!-- 💳 Card Block (Left - Slide In From Left) -->
+        <!-- 🧠 We Handle the Prompts Card (Left - Slide In From Left) -->
+        <div id="promptCard"
+            class="flex-[1_1_0%] max-w-md opacity-0 -translate-x-8 transition-all duration-700 ease-in-out"
+            data-animate-on-scroll>
+
+            <div class="absolute top-3 right-3">
+                <img src="img/logo.png" alt="Company Logo" class="w-16 h-16 opacity-90 animate-logoGlow" />
+            </div>
+
+            <div
+                class="bg-white rounded-2xl overflow-hidden font-[Montserrat] border border-gray-200 min-h-[420px] relative transition-all duration-500 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(26,118,127,0.45)] shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:z-50 hover:bg-[#f0fdfa] active:bg-[#f0fdfa]">
+
+                <div class="text-center text-gray-700 px-5 py-3">
+                    <h3 class="text-lg font-bold">We Handle the Prompts</h3>
+                    <p class="text-sm opacity-90">Everything from workflows to real-time customization</p>
+                </div>
+
+                <div class="bg-[#f9fafb] p-4 space-y-4">
+
+                    <!-- IF/THEN Prompt Flow -->
                     <div
-                        class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
-                        <svg class="w-6 h-6 text-teal-600 animate-call mb-1" fill="none" stroke="currentColor"
-                            stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M22 16.92v3a2 2 0 01-2.18 2A19.8 19.8 0 013.1 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.2 1.38.76 2.72 1.64 3.86a2 2 0 01-.45 2.82l-1.27 1.27a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.82-.45c1.14.88 2.48 1.44 3.86 1.64A2 2 0 0122 16.92z" />
-                        </svg>
-                        <p class="font-semibold text-xs text-black leading-tight">While You Work...</p>
-                        <p class="text-[10px] text-black leading-tight">Our assistant answers every call.</p>
+                        class="relative bg-white border border-gray-200 rounded-lg p-4 shadow-sm group hover:shadow-md transition-all duration-300">
+                        <div class="space-y-2 relative z-10">
+                            <div class="flex items-center gap-2 text-xs">
+                                <span
+                                    class="px-2 py-1 bg-[#ffcd30] text-black rounded-full font-semibold shadow-sm">IF</span>
+                                <span class="text-gray-700">User requests booking</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span
+                                    class="px-2 py-1 bg-[#1a767f] text-white rounded-full font-semibold shadow-sm">THEN</span>
+                                <span class="text-gray-700">Suggest meeting slots</span>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-3 border-t pt-2 flex items-center justify-between text-[10px] text-gray-500 italic">
+                            <span class="uppercase tracking-widest">Prompt Flow Active</span>
+                            <span class="text-[#1a767f] font-semibold">v1.4 Logic Tree</span>
+                        </div>
                     </div>
 
-                    <!-- Box 2: Clock -->
-                    <div
-                        class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
-                        <svg class="w-6 h-6 text-teal-600 animate-tick mb-1" fill="none" stroke="currentColor"
-                            stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <p class="font-semibold text-xs text-black leading-tight">Book Appointments</p>
-                        <p class="text-[10px] text-black leading-tight">Even when you are closed.
+                    <!-- Live Recording -->
+                    <div class="bg-white border border-gray-200 rounded-md p-2 shadow-sm font-[Montserrat]">
+                        <div class="flex justify-between items-center mb-1">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white"
+                                        fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 10a4 4 0 100-8 4 4 0 000 8zm-6 8a6 6 0 1112 0H4z" />
+                                    </svg>
+                                </div>
+                                <span class="flex items-center text-sm font-medium text-gray-800">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse mr-2"></span> Live
+                                    Recording
+                                </span>
+                            </div>
+                            <div class="flex items-end gap-1 h-6">
+                                <div class="w-1 bg-[#1a767f] animate-wave1 rounded"></div>
+                                <div class="w-1 bg-[#1a767f] animate-wave2 rounded"></div>
+                                <div class="w-1 bg-[#1a767f] animate-wave3 rounded"></div>
+                                <div class="w-1 bg-[#1a767f] animate-wave2 rounded"></div>
+                                <div class="w-1 bg-[#1a767f] animate-wave1 rounded"></div>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-gray-500 text-right">
+                            <span class="inline-block animate-dots">Call in progress —</span>
                         </p>
                     </div>
 
-                    <!-- Box 3: SMS -->
-                    <div
-                        class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
-                        <svg class="w-6 h-6 text-teal-600 mb-1" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                        </svg>
-                        <p class="font-bold text-xs text-black uppercase leading-tight">Answers FAQs</p>
-                        <p class="text-[10px] text-black leading-tight">Like store hours, pricing, availability.</p>
+                    <!-- Optimizer -->
+                    <div class="bg-white border border-gray-200 rounded-md p-2 shadow-sm">
+                        <p class="text-sm text-gray-700 mb-1 font-medium flex items-center gap-2">
+                            <span class="inline-block rotate-slow">⚙</span> Real-time Optimizer
+                        </p>
+                        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-[#1a767f] animate-loadingBar w-2/3 rounded-full"></div>
+                        </div>
+                        <p class="text-[11px] text-gray-500 mt-1">Syncing AI modules...</p>
                     </div>
 
-                    <!-- Box 4: Settings -->
+                    <!-- AI Scheduling -->
                     <div
-                        class="w-28 h-28 bg-teal-50 shadow rounded-lg flex flex-col items-center justify-center text-center p-2">
-                        <svg class="w-6 h-6 text-teal-600 animate-spin-slow mb-1" fill="none" stroke="currentColor"
-                            stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="3" />
-                            <path
-                                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09c0 .66.39 1.26 1 1.51a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c0 .66.39 1.26 1 1.51H21a2 2 0 110 4h-.09c-.66 0-1.26.39-1.51 1z" />
-                        </svg>
-                        <p class="font-semibold text-xs text-black leading-tight">We set it up</p>
-                        <p class="text-[10px] text-black leading-tight">You don’t need any tech skills.</p>
+                        class="relative bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-md hover:shadow-lg transition-all duration-300 group overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-2 h-2 bg-[#ffcd30] rounded-bl-full animate-pulse-glow z-10">
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-10 h-10 flex items-center justify-center rounded-lg bg-[#f1f5f9]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#1a767f]" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-semibold text-gray-800 leading-tight">AI Appointment
+                                    Scheduling</h4>
+                                <p class="text-[11px] text-gray-600 mt-1">Real-time scheduling with calendar sync
+                                    and built-in reminders.</p>
+                                <p class="text-[10px] text-gray-400 mt-1 italic">Invisible. Accurate. Always on
+                                    time.</p>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Footer -->
+                    <div
+                        class="px-5 py-2 bg-gray-50 text-[12px] text-gray-500 border-t border-gray-200 flex items-center justify-between">
+                        <span>Multi-language support enabled</span>
+                        <span class="text-[#1a767f] font-medium">EN / FR / AR</span>
+                    </div>
+
                 </div>
-
-                <!-- Custom Animations -->
-                <style>
-                    @keyframes spin-slow {
-                        0% {
-                            transform: rotate(0deg);
-                        }
-
-                        100% {
-                            transform: rotate(360deg);
-                        }
-                    }
-
-                    .animate-spin-slow {
-                        animation: spin-slow 4s linear infinite;
-                    }
-
-                    @keyframes call-vibrate {
-                        0% {
-                            transform: rotate(0deg);
-                        }
-
-                        20% {
-                            transform: rotate(10deg);
-                        }
-
-                        40% {
-                            transform: rotate(-10deg);
-                        }
-
-                        60% {
-                            transform: rotate(6deg);
-                        }
-
-                        80% {
-                            transform: rotate(-6deg);
-                        }
-
-                        100% {
-                            transform: rotate(0deg);
-                        }
-                    }
-
-                    .animate-call {
-                        animation: call-vibrate 1s infinite;
-                    }
-
-                    @keyframes tick {
-                        0% {
-                            transform: rotate(0deg);
-                        }
-
-                        50% {
-                            transform: rotate(15deg);
-                        }
-
-                        100% {
-                            transform: rotate(0deg);
-                        }
-                    }
-
-                    .animate-tick {
-                        animation: tick 2s ease-in-out infinite;
-                        transform-origin: center;
-                    }
-                </style>
-
-            </div>
-            <!-- 🟡 CTA Button -->
-            <a href="tel:+17274859941">
-                <button
-                    class="bg-[#ffcd30] text-white text-sm font-medium animate-bounce px-6 py-2 rounded-full shadow-md hover:bg-[#e6b800] hover:scale-105 transition-all duration-300">
-                    Book a Demo
-                </button>
-            </a>
-
-
-        </section>
-
-        <!-- ✨ STYLE & SCRIPT: IN-BLOCK -->
-        <style>
-            @keyframes blinkCursor {
-
-                0%,
-                100% {
-                    border-color: transparent;
-                }
-
-                50% {
-                    border-color: #4B5563;
-                }
-
-                /* Tailwind gray-700 */
-            }
-
-            #typewriter {
-                white-space: nowrap;
-                overflow: hidden;
-                display: inline-block;
-                animation: blinkCursor 1s step-end infinite;
-            }
-        </style>
-
-        <script>
-            const el = document.getElementById('typewriter');
-            const text = "How Can We Help Your Business?";
-            let typingInterval; // Store interval so we can clear it
-
-            const typeWriter = () => {
-                el.textContent = '';
-                let i = 0;
-                const speed = 40;
-
-                const type = () => {
-                    if (i < text.length) {
-                        el.textContent += text.charAt(i);
-                        i++;
-                        typingInterval = setTimeout(type, speed);
-                    }
-                };
-                type();
-            };
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        clearTimeout(typingInterval); // Avoid overlap if scrolling fast
-                        typeWriter();
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            observer.observe(el);
-        </script>
-        <!-- ✅ Modal Container (Initially hidden) -->
-        <div id="demoFormModal" class="fixed inset-0 z-[9999] bg-black/50 hidden items-center justify-center">
-            <div class="relative w-[95%] max-w-3xl mx-auto bg-white rounded-lg p-4 md:p-6">
-                <!-- ❌ Close Button -->
-                <button id="closeDemoFormBtn"
-                    class="absolute top-4 right-4 text-gray-600 text-2xl font-bold hover:text-black">
-                    &times;
-                </button>
-
-                <!-- 🧩 Embedded Form -->
-                <iframe src="https://api.leadconnectorhq.com/widget/form/ugRWgZyGNmk4kFNN80Ml"
-                    style="width:100%; height:694px; border:none; border-radius:3px;" id="popup-ugRWgZyGNmk4kFNN80Ml"
-                    data-layout="{'id':'POPUP'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated"
-                    data-deactivation-type="neverDeactivate" data-form-name="Request A Demo"
-                    data-layout-iframe-id="popup-ugRWgZyGNmk4kFNN80Ml" data-form-id="ugRWgZyGNmk4kFNN80Ml"
-                    title="Request A Demo"></iframe>
             </div>
         </div>
 
-        <!-- ✅ Script Dependencies -->
-        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
+        <!-- ✅ Animation Script -->
         <script>
-            const openBtn = document.getElementById("openDemoFormBtn");
-            const closeBtn = document.getElementById("closeDemoFormBtn");
-            const modal = document.getElementById("demoFormModal");
+            document.addEventListener("DOMContentLoaded", () => {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach(entry => {
+                            const el = entry.target;
+                            if (entry.isIntersecting) {
+                                el.classList.remove("opacity-0", "-translate-x-8");
+                                el.classList.add("animate-slide-in-from-left");
+                            } else {
+                                el.classList.remove("animate-slide-in-from-left");
+                                el.classList.add("opacity-0", "-translate-x-8");
+                            }
+                        });
+                    },
+                    { threshold: 0.2 }
+                );
 
-            openBtn.addEventListener("click", () => {
-                modal.classList.remove("hidden");
-                document.body.style.overflow = "hidden"; // lock scroll
-            });
-
-            closeBtn.addEventListener("click", () => {
-                modal.classList.add("hidden");
-                document.body.style.overflow = ""; // unlock scroll
+                const target = document.getElementById("promptCard");
+                if (target) observer.observe(target);
             });
         </script>
 
-        <section
-            class="w-full flex flex-col md:flex-row items-stretch justify-center gap-6 px-4 md:px-20 py-16 bg-white">
+        <!-- ✅ Animation Style -->
+        <style>
+            @keyframes slideInFromLeft {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-60px);
+                }
 
-            <!-- 💳 Card Block (Left - Slide In From Left) -->
-            <!-- 🧠 We Handle the Prompts Card (Left - Slide In From Left) -->
-            <div id="promptCard"
-                class="flex-[1_1_0%] max-w-md opacity-0 -translate-x-8 transition-all duration-700 ease-in-out"
-                data-animate-on-scroll>
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
 
-                <div class="absolute top-3 right-3">
-                    <img src="img/logo.png" alt="Company Logo" class="w-16 h-16 opacity-90 animate-logoGlow" />
+            .animate-slide-in-from-left {
+                animation: slideInFromLeft 0.8s ease-out forwards;
+            }
+        </style>
+
+        <!-- 📊 Real-Time Analytics Card (Right - Slide In From Right) -->
+        <div id="analyticsCard"
+            class="relative w-full max-w-md bg-white border border-gray-200 rounded-2xl shadow-xl p-6 sm:p-8 overflow-hidden transition-all duration-700 ease-in-out opacity-0 translate-x-8"
+            data-animate-on-scroll>
+
+            <!-- Glow Blob -->
+            <div class="absolute -top-14 -right-14 w-40 h-40 bg-[#ffcd30]/30 blur-2xl rounded-full animate-blob z-0">
+            </div>
+
+            <!-- Header -->
+            <div class="relative z-10 text-center mb-4">
+                <img src="img/logo.png" alt="Company Logo" class="w-16 h-16 opacity-90 mx-auto" />
+            </div>
+
+            <h2 class="text-base sm:text-lg font-bold text-[#1a767f] flex justify-center items-center gap-2">
+                <svg class="w-5 h-5 text-[#ffcd30] animate-spin-slow" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" stroke="#ffcd30" />
+                    <path d="M12 6v6l4 2" stroke="#1a767f" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Real-Time Analytics
+            </h2>
+
+            <!-- Features -->
+            <div class="relative z-10 space-y-3 text-sm text-gray-700 font-medium font-[Montserrat] mt-4">
+                <div class="flex items-start gap-2">
+                    <div
+                        class="w-5 h-5 bg-[#1a767f] rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
+                        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <p>Track every interaction, second-by-second.</p>
                 </div>
-
-                <div
-                    class="bg-white rounded-2xl overflow-hidden font-[Montserrat] border border-gray-200 min-h-[420px] relative transition-all duration-500 ease-in-out transform hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(26,118,127,0.45)] shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:z-50 hover:bg-[#f0fdfa] active:bg-[#f0fdfa]">
-
-                    <div class="text-center text-gray-700 px-5 py-3">
-                        <h3 class="text-lg font-bold">We Handle the Prompts</h3>
-                        <p class="text-sm opacity-90">Everything from workflows to real-time customization</p>
+                <div class="flex items-start gap-2">
+                    <div
+                        class="w-5 h-5 bg-yellow-400 rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" />
+                        </svg>
                     </div>
-
-                    <div class="bg-[#f9fafb] p-4 space-y-4">
-
-                        <!-- IF/THEN Prompt Flow -->
-                        <div
-                            class="relative bg-white border border-gray-200 rounded-lg p-4 shadow-sm group hover:shadow-md transition-all duration-300">
-                            <div class="space-y-2 relative z-10">
-                                <div class="flex items-center gap-2 text-xs">
-                                    <span
-                                        class="px-2 py-1 bg-[#ffcd30] text-black rounded-full font-semibold shadow-sm">IF</span>
-                                    <span class="text-gray-700">User requests booking</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-xs">
-                                    <span
-                                        class="px-2 py-1 bg-[#1a767f] text-white rounded-full font-semibold shadow-sm">THEN</span>
-                                    <span class="text-gray-700">Suggest meeting slots</span>
-                                </div>
-                            </div>
-                            <div
-                                class="mt-3 border-t pt-2 flex items-center justify-between text-[10px] text-gray-500 italic">
-                                <span class="uppercase tracking-widest">Prompt Flow Active</span>
-                                <span class="text-[#1a767f] font-semibold">v1.4 Logic Tree</span>
-                            </div>
-                        </div>
-
-                        <!-- Live Recording -->
-                        <div class="bg-white border border-gray-200 rounded-md p-2 shadow-sm font-[Montserrat]">
-                            <div class="flex justify-between items-center mb-1">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white"
-                                            fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M10 10a4 4 0 100-8 4 4 0 000 8zm-6 8a6 6 0 1112 0H4z" />
-                                        </svg>
-                                    </div>
-                                    <span class="flex items-center text-sm font-medium text-gray-800">
-                                        <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse mr-2"></span> Live
-                                        Recording
-                                    </span>
-                                </div>
-                                <div class="flex items-end gap-1 h-6">
-                                    <div class="w-1 bg-[#1a767f] animate-wave1 rounded"></div>
-                                    <div class="w-1 bg-[#1a767f] animate-wave2 rounded"></div>
-                                    <div class="w-1 bg-[#1a767f] animate-wave3 rounded"></div>
-                                    <div class="w-1 bg-[#1a767f] animate-wave2 rounded"></div>
-                                    <div class="w-1 bg-[#1a767f] animate-wave1 rounded"></div>
-                                </div>
-                            </div>
-                            <p class="text-[11px] text-gray-500 text-right">
-                                <span class="inline-block animate-dots">Call in progress —</span>
-                            </p>
-                        </div>
-
-                        <!-- Optimizer -->
-                        <div class="bg-white border border-gray-200 rounded-md p-2 shadow-sm">
-                            <p class="text-sm text-gray-700 mb-1 font-medium flex items-center gap-2">
-                                <span class="inline-block rotate-slow">⚙</span> Real-time Optimizer
-                            </p>
-                            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="h-full bg-[#1a767f] animate-loadingBar w-2/3 rounded-full"></div>
-                            </div>
-                            <p class="text-[11px] text-gray-500 mt-1">Syncing AI modules...</p>
-                        </div>
-
-                        <!-- AI Scheduling -->
-                        <div
-                            class="relative bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-md hover:shadow-lg transition-all duration-300 group overflow-hidden">
-                            <div
-                                class="absolute top-0 right-0 w-2 h-2 bg-[#ffcd30] rounded-bl-full animate-pulse-glow z-10">
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="relative w-10 h-10 flex items-center justify-center rounded-lg bg-[#f1f5f9]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#1a767f]" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <div class="flex-1">
-                                    <h4 class="text-sm font-semibold text-gray-800 leading-tight">AI Appointment
-                                        Scheduling</h4>
-                                    <p class="text-[11px] text-gray-600 mt-1">Real-time scheduling with calendar sync
-                                        and built-in reminders.</p>
-                                    <p class="text-[10px] text-gray-400 mt-1 italic">Invisible. Accurate. Always on
-                                        time.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Footer -->
-                        <div
-                            class="px-5 py-2 bg-gray-50 text-[12px] text-gray-500 border-t border-gray-200 flex items-center justify-between">
-                            <span>Multi-language support enabled</span>
-                            <span class="text-[#1a767f] font-medium">EN / FR / AR</span>
-                        </div>
-
+                    <p>Reveal patterns before your competitors blink.</p>
+                </div>
+                <div class="flex items-start gap-2">
+                    <div
+                        class="w-5 h-5 bg-pink-400 rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2.003 5.884L10 1l7.997 4.884A2 2 0 0119 7.618v8.764a2 2 0 01-1.003 1.734l-7 4.243a2 2 0 01-2.001 0l-7-4.243A2 2 0 011 16.382V7.618a2 2 0 011.003-1.734z" />
+                        </svg>
                     </div>
+                    <p>Read response times like a stock ticker.</p>
+                </div>
+                <div class="flex items-start gap-2">
+                    <div
+                        class="w-5 h-5 bg-purple-500 rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M5 8a2 2 0 114 0 2 2 0 01-4 0zm6 0a2 2 0 114 0 2 2 0 01-4 0z" />
+                            <path fill-rule="evenodd" d="M18 13a1 1 0 01-1 1H3a1 1 0 110-2h14a1 1 0 011 1z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <p>Spot drop-offs, ghosting & golden leads instantly.</p>
                 </div>
             </div>
 
-            <!-- ✅ Animation Script -->
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const observer = new IntersectionObserver(
-                        (entries) => {
-                            entries.forEach(entry => {
-                                const el = entry.target;
-                                if (entry.isIntersecting) {
-                                    el.classList.remove("opacity-0", "-translate-x-8");
-                                    el.classList.add("animate-slide-in-from-left");
-                                } else {
-                                    el.classList.remove("animate-slide-in-from-left");
-                                    el.classList.add("opacity-0", "-translate-x-8");
-                                }
-                            });
-                        },
-                        { threshold: 0.2 }
-                    );
-
-                    const target = document.getElementById("promptCard");
-                    if (target) observer.observe(target);
-                });
-            </script>
-
-            <!-- ✅ Animation Style -->
-            <style>
-                @keyframes slideInFromLeft {
-                    0% {
-                        opacity: 0;
-                        transform: translateX(-60px);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                }
-
-                .animate-slide-in-from-left {
-                    animation: slideInFromLeft 0.8s ease-out forwards;
-                }
-            </style>
-
-            <!-- 📊 Real-Time Analytics Card (Right - Slide In From Right) -->
-            <div id="analyticsCard"
-                class="relative w-full max-w-md bg-white border border-gray-200 rounded-2xl shadow-xl p-6 sm:p-8 overflow-hidden transition-all duration-700 ease-in-out opacity-0 translate-x-8"
-                data-animate-on-scroll>
-
-                <!-- Glow Blob -->
-                <div
-                    class="absolute -top-14 -right-14 w-40 h-40 bg-[#ffcd30]/30 blur-2xl rounded-full animate-blob z-0">
-                </div>
-
-                <!-- Header -->
-                <div class="relative z-10 text-center mb-4">
-                    <img src="img/logo.png" alt="Company Logo" class="w-16 h-16 opacity-90 mx-auto" />
-                </div>
-
-                <h2 class="text-base sm:text-lg font-bold text-[#1a767f] flex justify-center items-center gap-2">
-                    <svg class="w-5 h-5 text-[#ffcd30] animate-spin-slow" fill="none" stroke="currentColor"
-                        stroke-width="2" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" stroke="#ffcd30" />
-                        <path d="M12 6v6l4 2" stroke="#1a767f" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    Real-Time Analytics
-                </h2>
-
-                <!-- Features -->
-                <div class="relative z-10 space-y-3 text-sm text-gray-700 font-medium font-[Montserrat] mt-4">
-                    <div class="flex items-start gap-2">
-                        <div
-                            class="w-5 h-5 bg-[#1a767f] rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
-                            <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                        </div>
-                        <p>Track every interaction, second-by-second.</p>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <div
-                            class="w-5 h-5 bg-yellow-400 rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
-                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" />
-                            </svg>
-                        </div>
-                        <p>Reveal patterns before your competitors blink.</p>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <div
-                            class="w-5 h-5 bg-pink-400 rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
-                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M2.003 5.884L10 1l7.997 4.884A2 2 0 0119 7.618v8.764a2 2 0 01-1.003 1.734l-7 4.243a2 2 0 01-2.001 0l-7-4.243A2 2 0 011 16.382V7.618a2 2 0 011.003-1.734z" />
-                            </svg>
-                        </div>
-                        <p>Read response times like a stock ticker.</p>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <div
-                            class="w-5 h-5 bg-purple-500 rounded-full flex justify-center items-center shadow-sm animate-bounce-slow">
-                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M5 8a2 2 0 114 0 2 2 0 01-4 0zm6 0a2 2 0 114 0 2 2 0 01-4 0z" />
-                                <path fill-rule="evenodd" d="M18 13a1 1 0 01-1 1H3a1 1 0 110-2h14a1 1 0 011 1z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <p>Spot drop-offs, ghosting & golden leads instantly.</p>
-                    </div>
-                </div>
-
-                <!-- Chart Placeholder -->
-                <div class="relative z-10 mt-5">
-                    <canvas id="miniAnalyticsChart"
-                        class="w-full max-w-[430px] h-14 bg-white justify-center shadow-inner border border-gray-100"></canvas>
-                    <p class="text-[10px] text-center text-gray-400 mt-1">Live call volume (last 60s)</p>
-                </div>
-
-                <!-- Subtext -->
-                <p class="text-[10px] font-semibold text-gray-700 mt-4 text-center animate-fadeSlideIn">
-                    <span
-                        class="bg-clip-text text-transparent bg-gradient-to-r from-[#1a767f] via-[#ffcd30] to-[#1a767f] animate-textGlow">
-                        Monitor engagement in real-time
-                    </span>
-                </p>
-
-                <!-- Footer -->
-                <div
-                    class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[10px] text-gray-400 italic">
-                    <span>Last sync: <span id="analyticsLastSync">2.4s</span> ago</span>
-                    <span>· Uptime 99.98%</span>
-                </div>
-
-                <!-- CTA -->
-                <div class="w-full flex justify-center mt-4">
-                    <a href="https://mirajoagency.org/pricing-plan"
-                        class="text-[10px] px-4 py-1.5 bg-[#ffcd30] text-white rounded-full shadow-md hover:scale-105 hover:bg-[#e6b800] transition-all duration-300 font-semibold">
-                        View Live Data
-                    </a>
-                </div>
+            <!-- Chart Placeholder -->
+            <div class="relative z-10 mt-5">
+                <canvas id="miniAnalyticsChart"
+                    class="w-full max-w-[430px] h-14 bg-white justify-center shadow-inner border border-gray-100"></canvas>
+                <p class="text-[10px] text-center text-gray-400 mt-1">Live call volume (last 60s)</p>
             </div>
 
-            <!-- Animation Script + Style -->
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const observer = new IntersectionObserver(
-                        (entries) => {
-                            entries.forEach(entry => {
-                                const el = entry.target;
-                                if (entry.isIntersecting) {
-                                    el.classList.remove("opacity-0", "translate-x-8");
-                                    el.classList.add("animate-slide-in-from-right");
-                                } else {
-                                    el.classList.remove("animate-slide-in-from-right");
-                                    el.classList.add("opacity-0", "translate-x-8");
-                                }
-                            });
-                        },
-                        { threshold: 0.2 }
-                    );
+            <!-- Subtext -->
+            <p class="text-[10px] font-semibold text-gray-700 mt-4 text-center animate-fadeSlideIn">
+                <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-[#1a767f] via-[#ffcd30] to-[#1a767f] animate-textGlow">
+                    Monitor engagement in real-time
+                </span>
+            </p>
 
-                    const target = document.getElementById("analyticsCard");
-                    if (target) observer.observe(target);
-                });
-            </script>
-
-            <style>
-                @keyframes slideInFromRight {
-                    0% {
-                        opacity: 0;
-                        transform: translateX(60px);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                }
-
-                .animate-slide-in-from-right {
-                    animation: slideInFromRight 0.8s ease-out forwards;
-                }
-            </style>
-
-        </section>
-        <!-- 💡 Dual Feature Cards + Video Floating Boxes -->
-        <section class="relative w-full px-4 md:px-8 py-12 bg-white overflow-visible">
-            <div class="w-full flex flex-col md:flex-row items-stretch justify-between gap-4">
-
-                <!-- 💬 Communication Card -->
-                <div class="flex-1 flex justify-center">
-                    <div class="w-full max-w-[420px] opacity-0 -translate-x-8 transition-all duration-700 ease-in-out fade-in-left"
-                        data-observe="left-card">
-                        <div
-                            class="bg-white rounded-xl font-[Montserrat] border border-gray-200 transform hover:scale-[1.02] hover:shadow-[#fff4b8] shadow-md hover:z-10 transition-all duration-300">
-                            <!-- Header -->
-                            <div class="text-center text-[#1a767f] px-4 py-3">
-                                <h3 class="text-base font-semibold">Multi-channel Communication</h3>
-                                <p class="text-xs opacity-90">AI messaging across platforms, real-time.</p>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="bg-[#f9fafb] px-3 py-4 space-y-3 text-[12px]">
-                                <!-- Missed Call Text Back -->
-                                <div
-                                    class="bg-white border border-gray-200 rounded-lg p-2 shadow hover:shadow-md transition">
-                                    <div class="flex items-center gap-2 mb-1">
-                                        <div class="hidden md:flex gap-[1px]">
-                                            <div class="w-[2px] h-3 bg-[#1a767f] rounded animate-vibration1"></div>
-                                            <div class="w-[2px] h-4 bg-[#1a767f] rounded animate-vibration2"></div>
-                                            <div class="w-[2px] h-2 bg-[#1a767f] rounded animate-vibration3"></div>
-                                        </div>
-                                        <p class="text-[11px] font-semibold text-gray-800">Missed Call Text Back</p>
-                                    </div>
-                                    <div
-                                        class="bg-[#f9fafb] border-l-4 border-[#1a767f] p-1.5 rounded shadow-inner animate-slide-in">
-                                        <p class="text-[11px] text-gray-700 leading-tight">
-                                            Your AI voice agent follows up when a caller can't reach you.
-                                            <span class="font-medium text-[#1a767f]">Stay connected, even
-                                                offline.</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Unified Messaging Hub -->
-                                <div
-                                    class="bg-white border border-gray-200 rounded-lg p-2 shadow hover:shadow-md transition group relative">
-                                    <span class="glow-rail"></span>
-                                    <h4 class="text-sm font-semibold text-gray-800">Unified Messaging Hub</h4>
-                                    <p class="text-xs text-gray-600">Voice AI replies on every platform, always
-                                        on-brand.</p>
-                                    <p class="text-[10px] text-gray-400 italic">Fully responsive. Integrated design.</p>
-                                    <div class="flex justify-center gap-2 pt-1">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-                                            class="w-4 h-4 grayscale" />
-                                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-                                            class="w-4 h-4 grayscale" />
-                                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                                            class="w-4 h-4 grayscale" />
-                                        <img src="https://cdn-icons-png.flaticon.com/512/134/134932.png"
-                                            class="w-4 h-4 grayscale" />
-                                    </div>
-                                </div>
-
-                                <!-- CTA -->
-                                <div class="text-center mt-2">
-                                    <a href="https://mirajoagency.org/pricing-plan" target="_blank"
-                                        class="inline-block bg-[#ffcd30] text-white text-xs font-medium px-3 py-1.5 rounded-full hover:bg-[#e6b800] hover:scale-105 transition">
-                                        Get Started
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 📹 Video with Floating Cards -->
-                <div class="flex-1 relative flex justify-center items-center opacity-0 translate-x-8 fade-in-right transition-all duration-700 ease-in-out"
-                    data-observe="right-card">
-                    <!-- Video -->
-                    <div class="relative z-10 w-[260px] md:w-[320px] rounded-xl group">
-                        <div
-                            class="absolute inset-0 rounded-xl group-hover:shadow-[0_0_40px_rgba(26,118,127,0.3)] pointer-events-none z-0">
-                        </div>
-                        <video autoplay muted loop playsinline class="w-full h-auto rounded-xl z-10 relative">
-                            <source src="videos/aiiimg.mp4" type="video/mp4" />
-                        </video>
-                    </div>
-
-                    <!-- Floating Cards -->
-                    <div
-                        class="absolute top-[8%] left-[2%] md:top-[10%] md:left-[10%] z-20 w-36 md:w-44 p-2.5 bg-white/80 border border-gray-300 text-[#0A0A0A] rounded shadow">
-                        <p class="font-semibold text-xs">24/7 Agent Coverage</p>
-                        <p class="text-[10px] leading-snug mt-1">AI handles leads day and night.</p>
-                    </div>
-                    <div
-                        class="absolute bottom-[40%] right-[3%] md:top-[35%] md:right-[10%] z-20 w-36 md:w-44 p-2.5 bg-white/80 border border-gray-300 text-[#0A0A0A] rounded shadow">
-                        <p class="font-semibold text-xs">Smart Booking + CRM</p>
-                        <p class="text-[10px] leading-snug mt-1">Appointments run themselves.</p>
-                    </div>
-                    <div
-                        class="absolute bottom-[10%] left-[5%] md:bottom-[15%] md:left-[12%] z-20 w-36 md:w-44 p-2.5 bg-white/80 border border-gray-300 text-[#0A0A0A] rounded shadow">
-                        <p class="font-semibold text-xs">Cross-Platform Messaging</p>
-                        <p class="text-[10px] leading-snug mt-1">Facebook, IG, WhatsApp, Email covered.</p>
-                    </div>
-                </div>
+            <!-- Footer -->
+            <div class="mt-4 flex flex-col sm:flex-row justify-between items-center text-[10px] text-gray-400 italic">
+                <span>Last sync: <span id="analyticsLastSync">2.4s</span> ago</span>
+                <span>· Uptime 99.98%</span>
             </div>
 
-            <!-- 🔁 Intersection Observer + Animations -->
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const observer = new IntersectionObserver((entries) => {
+            <!-- CTA -->
+            <div class="w-full flex justify-center mt-4">
+                <a href="https://mirajoagency.org/pricing-plan"
+                    class="text-[10px] px-4 py-1.5 bg-[#ffcd30] text-white rounded-full shadow-md hover:scale-105 hover:bg-[#e6b800] transition-all duration-300 font-semibold">
+                    View Live Data
+                </a>
+            </div>
+        </div>
+
+        <!-- Animation Script + Style -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const observer = new IntersectionObserver(
+                    (entries) => {
                         entries.forEach(entry => {
+                            const el = entry.target;
                             if (entry.isIntersecting) {
-                                entry.target.classList.add('in-view');
+                                el.classList.remove("opacity-0", "translate-x-8");
+                                el.classList.add("animate-slide-in-from-right");
                             } else {
-                                entry.target.classList.remove('in-view');
+                                el.classList.remove("animate-slide-in-from-right");
+                                el.classList.add("opacity-0", "translate-x-8");
                             }
                         });
-                    }, { threshold: 0.4 });
+                    },
+                    { threshold: 0.2 }
+                );
 
-                    document.querySelectorAll('[data-observe]').forEach(el => observer.observe(el));
-                });
-            </script>
+                const target = document.getElementById("analyticsCard");
+                if (target) observer.observe(target);
+            });
+        </script>
 
-            <style>
-                @keyframes fadeInLeft {
-                    from {
-                        opacity: 0;
-                        transform: translateX(-50px);
-                    }
-
-                    to {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                }
-
-                @keyframes fadeInRight {
-                    from {
-                        opacity: 0;
-                        transform: translateX(50px);
-                    }
-
-                    to {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                }
-
-                .fade-in-left.in-view {
-                    animation: fadeInLeft 1s ease-out forwards;
-                }
-
-                .fade-in-right.in-view {
-                    animation: fadeInRight 1s ease-out forwards;
-                }
-            </style>
-        </section>
-
-
-        <!-- 🌈 Animations & Effects -->
         <style>
-            @keyframes fade-in-right {
+            @keyframes slideInFromRight {
                 0% {
                     opacity: 0;
                     transform: translateX(60px);
@@ -908,103 +801,286 @@
                 }
             }
 
-            .animate-fade-in-right {
-                animation: fade-in-right 1.2s ease-out forwards;
-            }
-
-            @keyframes bounce-slow {
-
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-
-                50% {
-                    transform: translateY(-3px);
-                }
-            }
-
-            .animate-bounce-slow {
-                animation: bounce-slow 2.2s infinite ease-in-out;
-            }
-
-            @keyframes blob {
-
-                0%,
-                100% {
-                    transform: translate(0px, 0px) scale(1);
-                }
-
-                33% {
-                    transform: translate(30px, -20px) scale(1.05);
-                }
-
-                66% {
-                    transform: translate(-20px, 10px) scale(0.95);
-                }
-            }
-
-            .animate-blob {
-                animation: blob 9s infinite ease-in-out;
-            }
-
-            @keyframes fadeSlideIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(10px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .animate-fadeSlideIn {
-                animation: fadeSlideIn 1s ease-out forwards;
-            }
-
-            @keyframes textGlow {
-
-                0%,
-                100% {
-                    opacity: 1;
-                }
-
-                50% {
-                    opacity: 0.3;
-                }
-            }
-
-            .animate-textGlow {
-                animation: textGlow 2.5s infinite ease-in-out;
-            }
-
-            .animate-spin-slow {
-                animation: spin 4s linear infinite;
+            .animate-slide-in-from-right {
+                animation: slideInFromRight 0.8s ease-out forwards;
             }
         </style>
 
-        <!-- 🎯 Optional: Scroll Observer -->
+    </section>
+    <!-- 💡 Dual Feature Cards + Video Floating Boxes -->
+    <section class="relative w-full px-4 md:px-8 py-12 bg-white overflow-visible">
+        <div class="w-full flex flex-col md:flex-row items-stretch justify-between gap-4">
+
+            <!-- 💬 Communication Card -->
+            <div class="flex-1 flex justify-center">
+                <div class="w-full max-w-[420px] opacity-0 -translate-x-8 transition-all duration-700 ease-in-out fade-in-left"
+                    data-observe="left-card">
+                    <div
+                        class="bg-white rounded-xl font-[Montserrat] border border-gray-200 transform hover:scale-[1.02] hover:shadow-[#fff4b8] shadow-md hover:z-10 transition-all duration-300">
+                        <!-- Header -->
+                        <div class="text-center text-[#1a767f] px-4 py-3">
+                            <h3 class="text-base font-semibold">Multi-channel Communication</h3>
+                            <p class="text-xs opacity-90">AI messaging across platforms, real-time.</p>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="bg-[#f9fafb] px-3 py-4 space-y-3 text-[12px]">
+                            <!-- Missed Call Text Back -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-lg p-2 shadow hover:shadow-md transition">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <div class="hidden md:flex gap-[1px]">
+                                        <div class="w-[2px] h-3 bg-[#1a767f] rounded animate-vibration1"></div>
+                                        <div class="w-[2px] h-4 bg-[#1a767f] rounded animate-vibration2"></div>
+                                        <div class="w-[2px] h-2 bg-[#1a767f] rounded animate-vibration3"></div>
+                                    </div>
+                                    <p class="text-[11px] font-semibold text-gray-800">Missed Call Text Back</p>
+                                </div>
+                                <div
+                                    class="bg-[#f9fafb] border-l-4 border-[#1a767f] p-1.5 rounded shadow-inner animate-slide-in">
+                                    <p class="text-[11px] text-gray-700 leading-tight">
+                                        Your AI voice agent follows up when a caller can't reach you.
+                                        <span class="font-medium text-[#1a767f]">Stay connected, even
+                                            offline.</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Unified Messaging Hub -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-lg p-2 shadow hover:shadow-md transition group relative">
+                                <span class="glow-rail"></span>
+                                <h4 class="text-sm font-semibold text-gray-800">Unified Messaging Hub</h4>
+                                <p class="text-xs text-gray-600">Voice AI replies on every platform, always
+                                    on-brand.</p>
+                                <p class="text-[10px] text-gray-400 italic">Fully responsive. Integrated design.</p>
+                                <div class="flex justify-center gap-2 pt-1">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                                        class="w-4 h-4 grayscale" />
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                                        class="w-4 h-4 grayscale" />
+                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                                        class="w-4 h-4 grayscale" />
+                                    <img src="https://cdn-icons-png.flaticon.com/512/134/134932.png"
+                                        class="w-4 h-4 grayscale" />
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <div class="text-center mt-2">
+                                <a href="https://mirajoagency.org/pricing-plan" target="_blank"
+                                    class="inline-block bg-[#ffcd30] text-white text-xs font-medium px-3 py-1.5 rounded-full hover:bg-[#e6b800] hover:scale-105 transition">
+                                    Get Started
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📹 Video with Floating Cards -->
+            <div class="flex-1 relative flex justify-center items-center opacity-0 translate-x-8 fade-in-right transition-all duration-700 ease-in-out"
+                data-observe="right-card">
+                <!-- Video -->
+                <div class="relative z-10 w-[260px] md:w-[320px] rounded-xl group">
+                    <div
+                        class="absolute inset-0 rounded-xl group-hover:shadow-[0_0_40px_rgba(26,118,127,0.3)] pointer-events-none z-0">
+                    </div>
+                    <video autoplay muted loop playsinline class="w-full h-auto rounded-xl z-10 relative">
+                        <source src="videos/aiiimg.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+                <!-- Floating Cards -->
+                <div
+                    class="absolute top-[8%] left-[2%] md:top-[10%] md:left-[10%] z-20 w-36 md:w-44 p-2.5 bg-white/80 border border-gray-300 text-[#0A0A0A] rounded shadow">
+                    <p class="font-semibold text-xs">24/7 Agent Coverage</p>
+                    <p class="text-[10px] leading-snug mt-1">AI handles leads day and night.</p>
+                </div>
+                <div
+                    class="absolute bottom-[40%] right-[3%] md:top-[35%] md:right-[10%] z-20 w-36 md:w-44 p-2.5 bg-white/80 border border-gray-300 text-[#0A0A0A] rounded shadow">
+                    <p class="font-semibold text-xs">Smart Booking + CRM</p>
+                    <p class="text-[10px] leading-snug mt-1">Appointments run themselves.</p>
+                </div>
+                <div
+                    class="absolute bottom-[10%] left-[5%] md:bottom-[15%] md:left-[12%] z-20 w-36 md:w-44 p-2.5 bg-white/80 border border-gray-300 text-[#0A0A0A] rounded shadow">
+                    <p class="font-semibold text-xs">Cross-Platform Messaging</p>
+                    <p class="text-[10px] leading-snug mt-1">Facebook, IG, WhatsApp, Email covered.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🔁 Intersection Observer + Animations -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                const card = document.getElementById('analyticsCard');
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            card.classList.remove("opacity-0", "translate-x-[60px]");
+                            entry.target.classList.add('in-view');
+                        } else {
+                            entry.target.classList.remove('in-view');
                         }
                     });
                 }, { threshold: 0.4 });
 
-                if (card) observer.observe(card);
+                document.querySelectorAll('[data-observe]').forEach(el => observer.observe(el));
             });
         </script>
 
-        <!-- 🔥 Background Glow Pulse -->
-        <div
-            class="absolute bottom-5 right-5 w-12 h-12 bg-gradient-to-tr from-[#1a767f] to-[#ffcd30] rounded-full opacity-15 blur-xl animate-pulse-ring pointer-events-none">
+        <style>
+            @keyframes fadeInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes fadeInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .fade-in-left.in-view {
+                animation: fadeInLeft 1s ease-out forwards;
+            }
+
+            .fade-in-right.in-view {
+                animation: fadeInRight 1s ease-out forwards;
+            }
+        </style>
+        <!-- Scroll To Top -->
+        <div class="mt-14 flex justify-center">
+            <button id="scrollToTop"
+                class="text-sm px-6 py-3 bg-gradient-to-r from-[#1a767f] to-[#ffcd30] text-white font-semibold rounded-full shadow hover:scale-105 transition-all duration-300">
+                Back to Top ↑
+            </button>
         </div>
+    </section>
+
+
+    <!-- 🌈 Animations & Effects -->
+    <style>
+        @keyframes fade-in-right {
+            0% {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fade-in-right {
+            animation: fade-in-right 1.2s ease-out forwards;
+        }
+
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 2.2s infinite ease-in-out;
+        }
+
+        @keyframes blob {
+
+            0%,
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -20px) scale(1.05);
+            }
+
+            66% {
+                transform: translate(-20px, 10px) scale(0.95);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 9s infinite ease-in-out;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeSlideIn {
+            animation: fadeSlideIn 1s ease-out forwards;
+        }
+
+        @keyframes textGlow {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .animate-textGlow {
+            animation: textGlow 2.5s infinite ease-in-out;
+        }
+
+        .animate-spin-slow {
+            animation: spin 4s linear infinite;
+        }
+    </style>
+
+    <!-- 🎯 Optional: Scroll Observer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const card = document.getElementById('analyticsCard');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        card.classList.remove("opacity-0", "translate-x-[60px]");
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            if (card) observer.observe(card);
+        });
+    </script>
+
+    <!-- 🔥 Background Glow Pulse -->
+    <div
+        class="absolute bottom-5 right-5 w-12 h-12 bg-gradient-to-tr from-[#1a767f] to-[#ffcd30] rounded-full opacity-15 blur-xl animate-pulse-ring pointer-events-none">
+    </div>
     </div>
 
     <!-- ✅ Typewriter Script -->
@@ -1269,6 +1345,7 @@
                 document.querySelectorAll('[data-observe]').forEach(el => observer.observe(el));
             });
         </script>
+
     </section>
 
     <!-- 🧠 FAQ Section -->
@@ -1302,225 +1379,222 @@
             });
         });
     </script>
+
     </section>
 
-
-    <!-- Full-height layout setup (important!) -->
     <section class="w-full bg-gradient-to-br from-[#0a0a0a] to-[#1a767f] py-20 px-4 text-white font-[Montserrat]">
         <div class="text-center mb-12">
             <h2
-                class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-white animate-bounce">
-                What Others Are Saying
-            </h2>
-        </div>
-
-        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-            <!-- Review Card 1 -->
-            <div data-aos="zoom-in"
-                class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-lg hover:scale-[1.02] transition-all duration-500">
-                <div class="flex gap-1 mb-2">
-                    <!-- 5 SVG Stars -->
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                </div>
-                <p class="italic text-sm text-gray-200 mb-2">“Just finished my demo with agent Chanel. She is so
-                    smooth and real sounding!”</p>
-                <span class="text-yellow-300 font-semibold">– Rosica</span>
-            </div>
-
-            <!-- Review Card 2 -->
-            <div data-aos="fade-up"
-                class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-lg hover:scale-[1.02] transition-all duration-500">
-                <div class="flex gap-1 mb-2">
-                    <!-- 5 Stars -->
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                </div>
-                <p class="italic text-sm text-gray-200 mb-2">“MiRAjO.ai literally saved us 12 hours a week.
-                    One-click and done. Our brand finally looks like it has a creative director on payroll.”</p>
-                <span class="text-yellow-300 font-semibold">– Tife A., Creative Lead</span>
-            </div>
-
-            <!-- Review Card 3 -->
-            <div data-aos="fade-up"
-                class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-lg hover:scale-[1.02] transition-all duration-500">
-                <div class="flex gap-1 mb-2">
-                    <!-- 5 Stars -->
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                </div>
-                <p class="italic text-sm text-gray-200 mb-2">“Used MiRAjO.ai to prep for a pitch. The branding?
-                    Immaculate. They asked who my designer was. I said ‘MiRAjO.ai’ and smiled.”</p>
-                <span class="text-yellow-300 font-semibold">– Liam A., Strategy Consultant</span>
-            </div>
-
-            <!-- Review Card 4 -->
-            <div data-aos="fade-up"
-                class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-lg hover:scale-[1.02] transition-all duration-500">
-                <div class="flex gap-1 mb-2">
-                    <!-- 5 Stars -->
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 15l-5.878 3.09L5.5 12 1 7.91l6.062-.91L10 2l2.938 5 6.062.91L14.5 12l1.378 6.09z" />
-                    </svg>
-                </div>
-                <p class="italic text-sm text-gray-200 mb-2">“MiRAjO.ai helped us scale conversations 4x without
-                    hiring. I didn’t know bots could feel this real.”</p>
-                <span class="text-yellow-300 font-semibold">– Malik J., CX Lead</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="relative bg-[#f9fafb] py-20 px-6 md:px-10 lg:px-24 font-[Montserrat] text-gray-800">
-        <div class="max-w-4xl mx-auto text-center mb-12">
-            <h2
-                class="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#1a767f] to-[#ffcd30] tracking-tight animate-pulse">
+                class="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#ffcd30] to-white tracking-tight mb-6 animate-pulse text-center">
                 Still Not Sure?
             </h2>
-            <p class="text-base text-gray-600 mt-2">Real answers to real questions — no fluff.</p>
+
+            <div>
+                <p class="text-base font-semibold text-white text-center mb-6">
+                    Real answers to real questions — no fluff.
+                </p>
+                <div class="space-y-6">
+                    <!-- FAQ Card 1 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">What makes an AI agent better than a
+                                chatbot?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            An AI agent is a live voice-powered assistant that acts like a virtual receptionist or
+                            customer service rep. It handles calls, books appointments, answers questions, and works in
+                            real time. A chatbot is text-based and great for websites or messaging apps—helping with
+                            support, lead capture, and FAQs. Both work together, and yes, you can customize everything
+                            to your brand.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 2 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">How many conversations or AI credits do I
+                                get?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            Unlimited! No caps, no hidden limits.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 3 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">Are there any extra costs?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            Just texting (SMS) fees if you use messaging. Everything else is covered in your plan.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 4 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">How do your multi-channel automations
+                                work?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            We connect SMS, email, WhatsApp, Instagram, Facebook, and more so your customers hear from
+                            you wherever they are. Automate replies, promotions, reminders, and campaigns—all from one
+                            place.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 5 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">Do you allow integrations?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            Yes—more than 1,000! We work with CRMs, schedulers, payment systems, marketing tools, and
+                            more. Our goal is to simplify your flow, not complicate it.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 6 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">How do I get support?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            Smart and Genius Plans include 24/7 live chat and email support. Brilliant Plan adds
+                            priority phone support for more direct access when you need it fast.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 7 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">What happens if I cancel?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            You can cancel anytime in your dashboard. Service continues through your billing cycle, and
+                            we store your data for 30 days just in case you change your mind.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 8 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">How long does setup take?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            Setup speed depends on how quickly we receive your info. We aim to make it smooth and fast,
+                            including configuration, prompt building, and testing.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 9 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">What does onboarding look like?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            We work closely with you to collect all the right details, build your prompts, test
+                            everything, and guide you every step. It’s collaborative but light on your workload.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 10 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">What types of businesses benefit most?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            Startups, mid-size businesses, and large teams in retail, healthcare, real estate, or
+                            service-based industries. If you want to save time, scale smart, and simplify—this is built
+                            for you.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 11 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">How does The Mirajo Agency help businesses
+                                succeed?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            We don’t just build tools—we give you the support and pricing to grow. Every plan includes a
+                            free listing in our Mirajo Collective directory to help expand your visibility and bring in
+                            real leads. Our support, automation, and pricing are designed with your success in mind.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Card 12 -->
+                    <div
+                        class="faq-card group transition-all duration-300 rounded-2xl bg-white/10 border border-white/30 hover:shadow-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/5">
+                            <span class="font-semibold text-lg text-white">Is there a setup cost?</span>
+                            <svg class="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-5 text-sm text-white/80">
+                            No separate setup fee. Your first payment covers everything—including setup.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="max-w-4xl mx-auto space-y-6">
-            <!-- FAQ Card -->
-            <div
-                class="faq-card group transition-all duration-300 rounded-2xl bg-white/70 border border-gray-200 hover:shadow-xl hover:border-[#1a767f] overflow-hidden">
-                <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/40">
-                    <span class="font-semibold text-lg text-gray-900">What makes an AI agent better than a
-                        chatbot?</span>
-                    <svg class="w-5 h-5 transform transition-transform duration-300 text-[#1a767f]" fill="none"
-                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="faq-content hidden px-6 pb-5 text-sm text-gray-600">
-                    Agents don’t just chat — they automate, schedule, track, and think across platforms.
-                </div>
-            </div>
-
-            <!-- FAQ Card -->
-            <div
-                class="faq-card group transition-all duration-300 rounded-2xl bg-white/70 border border-gray-200 hover:shadow-xl hover:border-[#1a767f] overflow-hidden">
-                <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/40">
-                    <span class="font-semibold text-lg text-gray-900">How many conversations do I get?</span>
-                    <svg class="w-5 h-5 transform transition-transform duration-300 text-[#1a767f]" fill="none"
-                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="faq-content hidden px-6 pb-5 text-sm text-gray-600">
-                    Unlimited. No limits, no tricks.
-                </div>
-            </div>
-
-            <!-- FAQ Card -->
-            <div
-                class="faq-card group transition-all duration-300 rounded-2xl bg-white/70 border border-gray-200 hover:shadow-xl hover:border-[#1a767f] overflow-hidden">
-                <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/40">
-                    <span class="font-semibold text-lg text-gray-900">Are there extra costs?</span>
-                    <svg class="w-5 h-5 transform transition-transform duration-300 text-[#1a767f]" fill="none"
-                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="faq-content hidden px-6 pb-5 text-sm text-gray-600">
-                    Just SMS fees if you use texting. Everything else is all-in.
-                </div>
-            </div>
-
-            <!-- FAQ Card -->
-            <div
-                class="faq-card group transition-all duration-300 rounded-2xl bg-white/70 border border-gray-200 hover:shadow-xl hover:border-[#1a767f] overflow-hidden">
-                <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 hover:bg-white/40">
-                    <span class="font-semibold text-lg text-gray-900">Do you offer integrations?</span>
-                    <svg class="w-5 h-5 transform transition-transform duration-300 text-[#1a767f]" fill="none"
-                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="faq-content hidden px-6 pb-5 text-sm text-gray-600">
-                    Yes. From CRMs to schedulers, we plug into your existing flow.
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll To Top -->
-        <div class="mt-14 flex justify-center">
-            <button id="scrollToTop"
-                class="text-sm px-6 py-3 bg-gradient-to-r from-[#1a767f] to-[#ffcd30] text-white font-semibold rounded-full shadow hover:scale-105 transition-all duration-300">
-                Back to Top ↑
-            </button>
-        </div>
-
         <!-- Script -->
         <script>
             document.querySelectorAll('.faq-toggle').forEach(toggle => {
@@ -1548,6 +1622,44 @@
             });
         </script>
     </section>
+ <section class="w-full bg-gradient-to-r from-[#0a0a0a] to-[#1a767f] px-6 py-10 text-white font-[Montserrat]">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+
+    <!-- Left: Text -->
+    <div>
+      <h3 class="text-2xl md:text-3xl font-bold leading-snug mb-2">
+        Join 3,000+ local business owners using automation to save time and serve more customers.
+      </h3>
+      <p class="text-sm md:text-base text-white/90">
+        Every week, we show you how real businesses automate the chaos. Quick read. Big results.
+      </p>
+    </div>
+
+    <!-- Right: Scrollable Form Container with iframe -->
+    <div class="w-full h-[270px] overflow-auto rounded-md">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/XjtNPj5puaSllr5sF5Rt"
+        style="width:100%;height:100%;border:none;border-radius:3px"
+        id="inline-XjtNPj5puaSllr5sF5Rt"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Newsletter"
+        data-height="612"
+        data-layout-iframe-id="inline-XjtNPj5puaSllr5sF5Rt"
+        data-form-id="XjtNPj5puaSllr5sF5Rt"
+        title="Newsletter">
+      </iframe>
+    </div>
+  </div>
+
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</section>
+
 
 
     <!-- Animation Style -->
