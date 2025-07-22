@@ -1,8 +1,7 @@
 {
   "rewrites": [
-    {
-      "source": "/pricing",
-      "destination": "/pricing.html"
-    }
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" }
   ]
 }
