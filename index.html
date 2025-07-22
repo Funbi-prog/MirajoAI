@@ -1622,34 +1622,48 @@
             });
         </script>
     </section>
+
     <section class="w-full bg-gradient-to-r from-[#0a0a0a] to-[#1a767f] px-6 py-10 text-white font-[Montserrat]">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
 
             <!-- Left: Text -->
             <div>
-                <h3 class="text-2xl md:text-3xl font-bold leading-snug mb-2">
+                <h3 class="text-2xl md:text-3xl font-bold leading-snug mb-4">
                     Join 3,000+ local business owners using automation to save time and serve more customers.
                 </h3>
-                <p class="text-sm md:text-base text-white/90">
+                <p class="text-base md:text-lg text-white/90">
                     Every week, we show you how real businesses automate the chaos. Quick read. Big results.
                 </p>
             </div>
 
-            <!-- Right: Scrollable Form Container with iframe -->
-            <div class="w-full h-[270px] overflow-auto rounded-md">
+            <!-- Right: Static Form (non-scrollable iframe) -->
+            <div class="w-full max-h-[900px] overflow-hidden rounded-xl shadow-lg border border-white/20">
                 <iframe src="https://api.leadconnectorhq.com/widget/form/XjtNPj5puaSllr5sF5Rt"
-                    style="width:100%;height:100%;border:none;border-radius:3px" id="inline-XjtNPj5puaSllr5sF5Rt"
-                    data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
-                    data-activation-type="alwaysActivated" data-activation-value=""
-                    data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Newsletter"
-                    data-height="612" data-layout-iframe-id="inline-XjtNPj5puaSllr5sF5Rt"
-                    data-form-id="XjtNPj5puaSllr5sF5Rt" title="Newsletter">
+                    class="w-full h-[900px] rounded-xl" style="border: none; overflow: hidden;" scrolling="no"
+                    id="inline-XjtNPj5puaSllr5sF5Rt" title="Newsletter Form">
                 </iframe>
             </div>
         </div>
 
+        <!-- Embed Script -->
         <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+        <!-- Dynamic Height Adjustment -->
+        <script>
+            window.addEventListener('message', function (event) {
+                if (event.origin.includes('leadconnectorhq.com')) {
+                    const data = event.data;
+                    if (typeof data === 'object' && data.height && data.type === 'hsFormCallback') {
+                        const iframe = document.getElementById('inline-XjtNPj5puaSllr5sF5Rt');
+                        if (iframe) {
+                            iframe.style.height = `${data.height}px`;
+                        }
+                    }
+                }
+            });
+        </script>
     </section>
+
 
 
 
