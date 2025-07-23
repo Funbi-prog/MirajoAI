@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/pricing", "destination": "/pricing.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/terms", "destination": "/terms.html" }
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/book-a-demo", "destination": "/book-a-demo.html" }
   ]
 }
