@@ -33,6 +33,35 @@
     .fade-up {
       animation: fadeUp 0.8s ease forwards;
     }
+
+    /* === NEW: slimmer cards + feature bullets === */
+    .plan-card {
+      max-width: 22rem;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 1280px) {
+      .plan-card {
+        max-width: 21rem;
+      }
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .95rem;
+      line-height: 1.4;
+    }
+
+    .feature-icon {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      color: var(--brand-teal);
+    }
   </style>
 </head>
 
@@ -94,50 +123,44 @@
     </h2>
     <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          class="text-[var(--brand-teal)]">
-          <circle cx="12" cy="12" r="10" stroke-width="2" />
-          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="24" height="24" viewBox="0 0 24 24" class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p class="text-sm text-gray-800 font-medium">Answer every call, 24/7</p>
       </div>
       <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          class="text-[var(--brand-teal)]">
-          <circle cx="12" cy="12" r="10" stroke-width="2" />
-          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="24" height="24" viewBox="0 0 24 24" class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p class="text-sm text-gray-800 font-medium">Book appointments automatically</p>
       </div>
       <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          class="text-[var(--brand-teal)]">
-          <circle cx="12" cy="12" r="10" stroke-width="2" />
-          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="24" height="24" viewBox="0 0 24 24" class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p class="text-sm text-gray-800 font-medium">Custom greetings and responses</p>
       </div>
       <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          class="text-[var(--brand-teal)]">
-          <circle cx="12" cy="12" r="10" stroke-width="2" />
-          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="24" height="24" viewBox="0 0 24 24" class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p class="text-sm text-gray-800 font-medium">FAQ handling (hours, pricing, availability)</p>
       </div>
       <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          class="text-[var(--brand-teal)]">
-          <circle cx="12" cy="12" r="10" stroke-width="2" />
-          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="24" height="24" viewBox="0 0 24 24" class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p class="text-sm text-gray-800 font-medium">Works with your current number</p>
       </div>
       <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          class="text-[var(--brand-teal)]">
-          <circle cx="12" cy="12" r="10" stroke-width="2" />
-          <path d="M8 12l2.5 2.5L16 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <svg width="24" height="24" viewBox="0 0 24 24" class="text-[var(--brand-teal)]">
+          <circle cx="12" cy="12" r="10" fill="currentColor" />
+          <path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p class="text-sm text-gray-800 font-medium">Setup + onboarding included</p>
       </div>
@@ -158,309 +181,250 @@
     <span class="text-gray-600 font-medium ml-4">Annual <span class="ml-1 text-xs text-gray-500">(Save
         15%)</span></span>
   </div>
-
-  <!-- Monthly Plans -->
-  <div id="monthlyPlans" class="max-w-7xl mx-auto space-y-8 fade-up">
-
-    <!-- Row 1: Sidekick + Enterprise -->
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-2">
-      <!-- Sidekick (Basic) -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Sidekick <span
-            class="text-sm text-gray-500">(Basic)</span></h3>
-        <p class="text-4xl font-bold text-gray-800 mb-2">$297<span class="text-base font-normal">/mo</span></p>
-        <p class="text-gray-600 mb-6">Chatbot-only tier for lean teams</p>
-
-        <!-- Feature checkboxes -->
+<!-- Monthly Plans -->
+<div id="monthlyPlans" class="max-w-7xl mx-auto space-y-10 fade-up">
+  <!-- Sidekick (centered, standalone) -->
+  <div class="flex justify-center">
+    <div class="plan-card w-full max-w-xl bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">💬 Sidekick</h3>
+        <p class="text-gray-600 mb-2">Chatbot only, minimal AI features</p>
+        <p class="text-4xl font-bold text-gray-800 mb-2">$297<span class="text-base font-normal">/month</span></p>
         <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 1 Web/SMS Chatbot</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> CRM via SMS &amp; Email</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Calendar booking</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 2 user logins</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Email support</label>
+          <div>1 Web/SMS Chatbot</div>
+          <div>Basic automated responses</div>
+          <div>Email support</div>
+          <div>2 user logins</div>
         </div>
-
-        <a href="#"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition"
-          aria-label="Choose Sidekick">Get Started</a>
       </div>
-
-      <!-- Mission Control (Enterprise) — copy for top row -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Mission Control <span
-            class="text-sm text-gray-500">(Enterprise)</span></h3>
-        <p class="text-4xl font-bold text-gray-800 mb-2">Custom</p>
-        <p class="text-gray-600 mb-6">Multi-agent, multi-location deployments</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Multiple AI agents across sub-accounts</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom languages &amp; numbers</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom API &amp; automations</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Dedicated Account Manager</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Priority enterprise support</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom user logins</label>
-        </div>
-
-        <a href="#"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition"
-          aria-label="Contact Sales for Mission Control">Contact Sales</a>
-      </div>
+      <a href="#"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Get Started</a>
     </div>
-
-    <!-- Row 2: Starter + Growth + Premium -->
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Reception Pro (Starter Voice) -->
-      <div
-        class="relative w-full bg-white rounded-3xl shadow-lg p-8 border-4 border-indigo-600 transition hover:shadow-2xl">
-        <div
-          class="absolute -top-5 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white px-4 py-1 border border-indigo-600 rounded-full text-indigo-600 font-semibold text-sm shadow">
-          Most Popular
-        </div>
-        <h3 class="text-2xl font-bold text-indigo-700 mb-2">Reception Pro <span class="text-sm text-gray-500">(Starter
-            Voice)</span></h3>
-        <p class="text-4xl font-bold text-gray-800 mb-2">$895<span class="text-base font-normal">/mo</span></p>
-        <p class="text-gray-600 mb-6">Inbound voice agent + chatbot</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600">
-            Inbound calls only (unlimited minutes)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600"> 1
-            local number &amp; voice profile</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600"> 1
-            language</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600">
-            Prompt setup (one-time)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600"> 2
-            user logins · Email/Chat support</label>
-        </div>
-
-        <a href="https://buy.stripe.com/7sY28r0KR5fR8RR2U3fEk0P"
-          class="block bg-indigo-600 text-white font-semibold text-center py-3 rounded-xl hover:bg-indigo-700 transition"
-          aria-label="Choose Reception Pro">Start with Reception Pro</a>
-      </div>
-
-      <!-- Ops Guru (Growth Voice) -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Ops Guru <span
-            class="text-sm text-gray-500">(Growth Voice)</span></h3>
-        <p class="text-4xl font-bold text-gray-800 mb-2">$1,295<span class="text-base font-normal">/mo</span></p>
-        <p class="text-gray-600 mb-6">Scale conversations across channels</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Inbound voice (unlimited minutes)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 2 chatbots · 2 languages</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 2 local numbers &amp; profiles</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Quarterly prompt optimization</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Multichannel: SMS, WhatsApp, FB, IG DMs</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 4 user logins · Chat support</label>
-        </div>
-
-        <a href="https://buy.stripe.com/fZubJ18djcIj1ppcuDfEk0R"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition"
-          aria-label="Choose Ops Guru">Choose Ops Guru</a>
-      </div>
-
-      <!-- Business Pilot (Premium Voice) -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Business Pilot <span
-            class="text-sm text-gray-500">(Premium Voice)</span></h3>
-        <p class="text-4xl font-bold text-gray-800 mb-2">$1,995<span class="text-base font-normal">/mo</span></p>
-        <p class="text-gray-600 mb-6">Premium integrations &amp; support</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Inbound voice (unlimited minutes)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 3 languages · 3 local numbers</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Monthly + Seasonal Campaign scripts</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom API integrations</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Multichannel messaging</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 6 user logins · Phone support</label>
-        </div>
-
-        <a href="https://buy.stripe.com/6oUcN579f4bN2ttbqzfEk0T"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition"
-          aria-label="Choose Business Pilot">I Want Business Pilot</a>
-      </div>
-    </div>
-
-  </div>
-  <!-- Annual Plans -->
-  <div id="annualPlans" class="hidden max-w-7xl mx-auto space-y-8 fade-up">
-
-    <!-- Row 1: Sidekick + Enterprise -->
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-2">
-      <!-- Sidekick Annual -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Sidekick <span
-            class="text-sm text-gray-500">(Basic)</span></h3>
-        <p class="text-3xl font-bold text-gray-800 mb-1">$3,029<span class="text-base font-normal">/yr</span></p>
-        <p class="text-sm text-gray-600 mb-6">($253/mo equivalent) · Save 15%</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 1 Web/SMS Chatbot</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> CRM via SMS &amp; Email</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Calendar booking</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 2 user logins</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Email support</label>
-        </div>
-
-        <a href="#"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Get
-          Started</a>
-      </div>
-
-      <!-- Mission Control Annual — copy for top row -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Mission Control <span
-            class="text-sm text-gray-500">(Enterprise)</span></h3>
-        <p class="text-3xl font-bold text-gray-800 mb-1">Custom</p>
-        <p class="text-sm text-gray-600 mb-6">Custom pricing · Save 15% on multi-year</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Multiple AI agents across sub-accounts</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom languages &amp; numbers</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom API &amp; automations</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Dedicated Account Manager</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Priority enterprise support</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom user logins</label>
-        </div>
-
-        <a href="#"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Contact
-          Sales</a>
-      </div>
-    </div>
-
-    <!-- Row 2: Starter + Growth + Premium -->
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Reception Pro Annual -->
-      <div
-        class="relative w-full bg-white rounded-3xl shadow-lg p-8 border-4 border-indigo-600 transition hover:shadow-2xl">
-        <div
-          class="absolute -top-5 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white px-4 py-1 border border-indigo-600 rounded-full text-indigo-600 font-semibold text-sm shadow">
-          Most Popular
-        </div>
-        <h3 class="text-2xl font-bold text-indigo-700 mb-2">Reception Pro <span class="text-sm text-gray-500">(Starter
-            Voice)</span></h3>
-        <p class="text-3xl font-bold text-gray-800 mb-1">$9,129<span class="text-base font-normal">/yr</span></p>
-        <p class="text-sm text-gray-600 mb-6">($760/mo equivalent) · Save 15%</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600">
-            Inbound calls only (unlimited minutes)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600"> 1
-            local number &amp; voice profile</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600"> 1
-            language</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600">
-            Prompt setup (one-time)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-indigo-600"> 2
-            user logins · Email/Chat support</label>
-        </div>
-
-        <a href="https://buy.stripe.com/aFadR9bpv7nZ5FF3Y7fEk0Q"
-          class="block bg-indigo-600 text-white font-semibold text-center py-3 rounded-xl hover:bg-indigo-700 transition">Start
-          with Reception Pro</a>
-      </div>
-
-      <!-- Ops Guru Annual -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Ops Guru <span
-            class="text-sm text-gray-500">(Growth Voice)</span></h3>
-        <p class="text-3xl font-bold text-gray-800 mb-1">$13,209<span class="text-base font-normal">/yr</span></p>
-        <p class="text-sm text-gray-600 mb-6">($1,100/mo equivalent) · Save 15%</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Inbound voice (unlimited minutes)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 2 chatbots · 2 languages</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 2 local numbers &amp; profiles</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Quarterly prompt optimization</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Multichannel: SMS, WhatsApp, FB, IG DMs</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 4 user logins · Chat support</label>
-        </div>
-
-        <a href="https://buy.stripe.com/cNi7sLdxDgYz6JJ0LVfEk0S"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Choose
-          Ops Guru</a>
-      </div>
-
-      <!-- Business Pilot Annual -->
-      <div
-        class="w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl">
-        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">Business Pilot <span
-            class="text-sm text-gray-500">(Premium Voice)</span></h3>
-        <p class="text-3xl font-bold text-gray-800 mb-1">$20,349<span class="text-base font-normal">/yr</span></p>
-        <p class="text-sm text-gray-600 mb-6">($1,695/mo equivalent) · Save 15%</p>
-
-        <div class="space-y-3 mb-8 text-gray-700">
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Inbound voice (unlimited minutes)</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 3 languages · 3 local numbers</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Monthly + Seasonal Campaign scripts</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Custom API integrations</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> Multichannel messaging</label>
-          <label class="flex items-center gap-2"><input type="checkbox" checked disabled
-              class="accent-[var(--brand-teal)]"> 6 user logins · Phone support</label>
-        </div>
-
-        <a href="https://buy.stripe.com/00w00j79faAb6JJgKTfEk0U"
-          class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">I
-          Want Business Pilot</a>
-      </div>
-    </div>
-
   </div>
 
+  <!-- Three main monthly plans in a row -->
+  <div class="grid gap-6 grid-cols-1 md:grid-cols-3">
+    <!-- Reception Pro -->
+    <div class="plan-card relative w-full bg-white rounded-3xl shadow-lg p-8 border-4 border-indigo-600 transition hover:shadow-2xl flex flex-col justify-between">
+      <div class="absolute -top-5 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white px-4 py-1 border border-indigo-600 rounded-full text-indigo-600 font-semibold text-sm shadow">
+        ⭐ MOST POPULAR ⭐
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-indigo-700 mb-2">📞 Reception Pro <span class="text-sm text-gray-500">(Starter Voice)</span></h3>
+        <p class="text-gray-600 mb-2">1 AI voice agent, single-location</p>
+        <p class="text-4xl font-bold text-gray-800 mb-2">$895<span class="text-base font-normal">/month</span></p>
+
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>1 AI Voice Agent (inbound calls only)</div>
+          <div>1 Web/SMS Chatbot</div>
+          <div>English or any 1 language</div>
+          <div>1 included local number</div>
+          <div>One-time setup</div>
+          <div>SMS & Email automations</div>
+          <div>Calendar booking</div>
+          <div>Email/Chat priority support</div>
+        </div>
+      </div>
+      <a href="https://buy.stripe.com/7sY28r0KR5fR8RR2U3fEk0P"
+         class="block bg-indigo-600 text-white font-semibold text-center py-3 rounded-xl hover:bg-indigo-700 transition"
+         aria-label="Choose Reception Pro">Start with Reception Pro</a>
+    </div>
+
+    <!-- Ops Guru -->
+    <div class="plan-card w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">🚀 Ops Guru <span class="text-sm text-gray-500">(Growth Voice)</span></h3>
+        <p class="text-gray-600 mb-2">Multi-function AI agents, multiple numbers</p>
+        <p class="text-4xl font-bold text-gray-800 mb-2">$1,295<span class="text-base font-normal">/month</span></p>
+
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>2 AI Voice Agents (inbound)</div>
+          <div>2 Chatbots</div>
+          <div>Any 2 languages (language options)</div>
+          <div>2 included local numbers</div>
+          <div>Quarterly prompt optimization</div>
+          <div>Multi-channel messaging (SMS, WhatsApp, FB, Instagram DMs)</div>
+          <div>Calendar booking</div>
+          <div>Chat priority support</div>
+        </div>
+      </div>
+      <a href="https://buy.stripe.com/fZubJ18djcIj1ppcuDfEk0R"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition"
+         aria-label="Choose Ops Guru">Choose Growth Voice</a>
+    </div>
+
+    <!-- Business Pilot -->
+    <div class="plan-card w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">⭐ Business Pilot <span class="text-sm text-gray-500">(Premium Voice)</span></h3>
+        <p class="text-gray-600 mb-2">Advanced features, multi-language, seasonal prompts</p>
+        <p class="text-4xl font-bold text-gray-800 mb-2">$1,995<span class="text-base font-normal">/month</span></p>
+
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>3 AI Voice Agents (inbound + outbound campaigns)</div>
+          <div>3 Chatbots</div>
+          <div>Any 3 languages (language options)</div>
+          <div>3 included local numbers</div>
+          <div>Monthly + seasonal/campaign scripts</div>
+          <div>Multi-channel messaging (SMS, WhatsApp, FB, Instagram DMs)</div>
+          <div>Custom API integrations</div>
+          <div>Calendar booking</div>
+          <div>Call priority support</div>
+        </div>
+      </div>
+      <a href="https://buy.stripe.com/6oUcN579f4bN2ttbqzfEk0T"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition"
+         aria-label="Choose Business Pilot">Get Premium Voice</a>
+    </div>
+  </div>
+
+  <!-- Mission Control (centered, standalone) -->
+  <div class="flex justify-center">
+    <div class="plan-card w-full max-w-3xl bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">🏢 Mission Control</h3>
+        <p class="text-gray-600 mb-2">Enterprise — Multi-subaccount, multi-location AI management</p>
+        <p class="text-3xl font-bold text-gray-800 mb-6">Custom</p>
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>Multiple AI Agents across multiple sub-accounts</div>
+          <div>Custom chatbots per location/department</div>
+          <div>Custom language support</div>
+          <div>Custom local numbers & profiles</div>
+          <div>Custom prompt optimization</div>
+          <div>Custom multi-channel messaging</div>
+          <div>Custom API integrations</div>
+          <div>Calendar booking</div>
+          <div>Dedicated Account Manager</div>
+        </div>
+      </div>
+      <a href="#"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Contact Sales</a>
+    </div>
+  </div>
+</div>
+<!-- Annual Plans -->
+<div id="annualPlans" class="hidden max-w-7xl mx-auto space-y-10 fade-up">
+  <!-- Sidekick (centered, standalone) -->
+  <div class="flex justify-center">
+    <div class="plan-card w-full max-w-xl bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">💬 Sidekick</h3>
+        <p class="text-gray-600 mb-2">Chatbot only, minimal AI features</p>
+        <p class="text-3xl font-bold text-gray-800 mb-1">$253<span class="text-base font-normal">/month</span></p>
+        <p class="text-sm text-gray-600 mb-6">Save $576/year</p>
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>1 Web/SMS Chatbot</div>
+          <div>Basic automated responses</div>
+          <div>Email support</div>
+          <div>2 user logins</div>
+        </div>
+      </div>
+      <a href="#"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Three annual plans in a row (discounted monthly equivalents + savings) -->
+  <div class="grid gap-6 grid-cols-1 md:grid-cols-3">
+    <!-- Reception Pro Annual -->
+    <div class="plan-card relative w-full bg-white rounded-3xl shadow-lg p-8 border-4 border-indigo-600 transition hover:shadow-2xl flex flex-col justify-between">
+      <div class="absolute -top-5 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white px-4 py-1 border border-indigo-600 rounded-full text-indigo-600 font-semibold text-sm shadow">
+        ⭐ MOST POPULAR ⭐
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-indigo-700 mb-2">📞 Reception Pro <span class="text-sm text-gray-500">(Starter Voice)</span></h3>
+        <p class="text-gray-600 mb-2">1 AI voice agent, single-location</p>
+        <p class="text-3xl font-bold text-gray-800 mb-1">$761 <span class="line-through text-gray-500">$895</span>/month</p>
+        <p class="text-sm text-gray-600 mb-6">Save $1,608/year</p>
+
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>1 AI Voice Agent (inbound calls only)</div>
+          <div>1 Web/SMS Chatbot</div>
+          <div>English or any 1 language</div>
+          <div>1 included local number</div>
+          <div>One-time setup</div>
+          <div>SMS & Email automations</div>
+          <div>Calendar booking</div>
+          <div>Email/Chat priority support</div>
+        </div>
+      </div>
+      <a href="https://buy.stripe.com/aFadR9bpv7nZ5FF3Y7fEk0Q"
+         class="block bg-indigo-600 text-white font-semibold text-center py-3 rounded-xl hover:bg-indigo-700 transition">Start with Reception Pro</a>
+    </div>
+
+    <!-- Ops Guru Annual -->
+    <div class="plan-card w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">🚀 Ops Guru <span class="text-sm text-gray-500">(Growth Voice)</span></h3>
+        <p class="text-gray-600 mb-2">Multi-function AI agents, multiple numbers</p>
+        <p class="text-3xl font-bold text-gray-800 mb-1">$1,101 <span class="line-through text-gray-500">$1,295</span>/month</p>
+        <p class="text-sm text-gray-600 mb-6">Save $2,328/year</p>
+
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>2 AI Voice Agents (inbound)</div>
+          <div>2 Chatbots</div>
+          <div>Any 2 languages (language options)</div>
+          <div>2 included local numbers</div>
+          <div>Quarterly prompt optimization</div>
+          <div>Multi-channel messaging (SMS, WhatsApp, FB, Instagram DMs)</div>
+          <div>Calendar booking</div>
+          <div>Chat priority support</div>
+        </div>
+      </div>
+      <a href="https://buy.stripe.com/cNi7sLdxDgYz6JJ0LVfEk0S"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Choose Growth Voice</a>
+    </div>
+
+    <!-- Business Pilot Annual -->
+    <div class="plan-card w-full bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">⭐ Business Pilot <span class="text-sm text-gray-500">(Premium Voice)</span></h3>
+        <p class="text-gray-600 mb-2">Advanced features, multi-language, seasonal prompts</p>
+        <p class="text-3xl font-bold text-gray-800 mb-1">$1,696 <span class="line-through text-gray-500">$1,995</span>/month</p>
+        <p class="text-sm text-gray-600 mb-6">Save $3,588/year</p>
+
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>3 AI Voice Agents (inbound + outbound campaigns)</div>
+          <div>3 Chatbots</div>
+          <div>Any 3 languages (language options)</div>
+          <div>3 included local numbers</div>
+          <div>Monthly + seasonal/campaign scripts</div>
+          <div>Multi-channel messaging (SMS, WhatsApp, FB, Instagram DMs)</div>
+          <div>Custom API integrations</div>
+          <div>Calendar booking</div>
+          <div>Call priority support</div>
+        </div>
+      </div>
+      <a href="https://buy.stripe.com/00w00j79faAb6JJgKTfEk0U"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Get Premium Voice</a>
+    </div>
+  </div>
+
+  <!-- Mission Control (centered, standalone) -->
+  <div class="flex justify-center">
+    <div class="plan-card w-full max-w-3xl bg-white rounded-3xl shadow-lg p-8 border-t-4 border-[var(--pastel-yellow)] transition hover:shadow-2xl flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-bold text-[var(--brand-teal)] mb-2">🏢 Mission Control</h3>
+        <p class="text-gray-600 mb-2">Enterprise — Multi-subaccount, multi-location AI management</p>
+        <p class="text-3xl font-bold text-gray-800 mb-6">Custom</p>
+        <div class="space-y-3 mb-8 text-gray-700">
+          <div>Multiple AI Agents across multiple sub-accounts</div>
+          <div>Custom chatbots per location/department</div>
+          <div>Custom language support</div>
+          <div>Custom local numbers & profiles</div>
+          <div>Custom prompt optimization</div>
+          <div>Custom multi-channel messaging</div>
+          <div>Custom API integrations</div>
+          <div>Calendar booking</div>
+          <div>Dedicated Account Manager</div>
+        </div>
+      </div>
+      <a href="#"
+         class="block bg-[var(--brand-teal)] text-white font-semibold text-center py-3 rounded-xl hover:opacity-90 transition">Contact Sales</a>
+    </div>
+  </div>
+</div>
+  </div>
   <!-- Add-Ons -->
   <section class="py-16 px-6 bg-white fade-up">
     <div class="max-w-5xl mx-auto text-center mb-10">
@@ -538,6 +502,7 @@
               <td class="text-center">3</td>
               <td class="text-center">Custom</td>
             </tr>
+            <!-- Row 4: AI Voice Agent (no strike) -->
             <tr>
               <td class="px-4 py-3">AI Voice Agent</td>
               <td class="text-center text-gray-400">— (chatbot only)</td>
@@ -546,7 +511,6 @@
               <td class="text-center">Inbound</td>
               <td class="text-center">Multiple agents across sub-accounts</td>
             </tr>
-
             <tr>
               <td class="px-4 py-3">Multi-Language Support</td>
               <td class="text-center text-gray-400">—</td>
@@ -563,6 +527,7 @@
               <td class="text-center">3</td>
               <td class="text-center">Custom</td>
             </tr>
+            <!-- Row 7: Prompt wording update -->
             <tr>
               <td class="px-4 py-3">Prompt Refinement &amp; Optimization</td>
               <td class="text-center text-gray-400">—</td>
@@ -587,6 +552,7 @@
               <td class="text-center">✔</td>
               <td class="text-center">✔</td>
             </tr>
+            <!-- Row 10: remove tickmarks when text present -->
             <tr>
               <td class="px-4 py-3">Multi-Channel Messaging</td>
               <td class="text-center text-gray-400">—</td>
@@ -629,12 +595,13 @@
     </div>
   </section>
 
+  <!-- Scripts -->
   <script>
-    // mobile menu
+    // Mobile menu
     document.getElementById('menu-toggle').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
-    // plan toggle
+    // Plan toggle
     document.getElementById('planToggle').addEventListener('change', () => {
       document.getElementById('monthlyPlans').classList.toggle('hidden');
       document.getElementById('annualPlans').classList.toggle('hidden');
