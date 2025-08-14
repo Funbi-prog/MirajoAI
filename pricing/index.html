@@ -66,53 +66,52 @@
 </head>
 
 <body class="bg-white text-black">
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="/" class="transition-transform duration-300 hover:scale-105">
-        <img src="/img/nav.png" alt="MirajoAI Logo"
-          class="h-20 w-20 object-contain shadow-none bg-transparent border-none"
-          style="background: transparent; box-shadow: none; border: none;" />
-      </a>
+  <<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="transition-transform duration-300 hover:scale-105">
+      <img src="/img/nav.png" alt="MirajoAI Logo"
+        class="h-20 w-20 object-contain shadow-none bg-transparent border-none" />
+    </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <a href="/" class="hover:text-[var(--brand-teal)] transition">Home</a>
-        <a href="https://home.mirajoco.org/" class="hover:text-[var(--brand-teal)] transition">MiRAjO Collective</a>
-        <a href="https://app.mirajo.ai/" class="hover:text-[var(--brand-teal)] transition">Client Login</a>
-        <a href="/blog" class="hover:text-[var(--brand-teal)] transition">Blog</a>
-      </nav>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a href="/" class="hover:text-[var(--brand-teal)] transition">Home</a>
+      <a href="https://home.mirajoco.org/" class="hover:text-[var(--brand-teal)] transition">MiRAjO Collective</a>
+      <a href="https://app.mirajo.ai/" class="hover:text-[var(--brand-teal)] transition">Client Login</a>
+      <a href="/blog" class="hover:text-[var(--brand-teal)] transition">Blog</a>
+    </nav>
 
-      <!-- Mobile Menu Toggle -->
-      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none" aria-label="Open menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none" aria-label="Open menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
 
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-      <a href="/" class="block px-6 py-3 font-medium hover:bg-gray-50">Home</a>
-      <a href="https://home.mirajoco.org/" class="block px-6 py-3 font-medium hover:bg-gray-50">MiRAjO Collective</a>
-      <a href="https://app.mirajo.ai/" class="block px-6 py-3 font-medium hover:bg-gray-50">Client Login</a>
-      <a href="/blog" class="block px-6 py-3 font-medium hover:bg-gray-50">Blog</a>
-    </div>
-  </header>
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <a href="/" class="block px-6 py-3 font-medium hover:bg-gray-50">Home</a>
+    <a href="https://home.mirajoco.org/" class="block px-6 py-3 font-medium hover:bg-gray-50">MiRAjO Collective</a>
+    <a href="https://app.mirajo.ai/" class="block px-6 py-3 font-medium hover:bg-gray-50">Client Login</a>
+    <a href="/blog" class="block px-6 py-3 font-medium hover:bg-gray-50">Blog</a>
+  </div>
+</header>
 
-  <!-- Mobile Menu
-    Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggleButton = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      toggleButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
+<!-- Mobile Menu Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleButton.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
     });
-  </script>
+  });
+</script>
 
 
   <!-- HERO -->
@@ -987,7 +986,7 @@
           </svg>
         </button>
       </a>
-      <a href="https://api.leadconnectorhq.com/widget/form/ugRWgZyGNmk4kFNN80Ml" target="_blank"
+      <a href="/book-a-demo.html" target="_blank"
         rel="noopener noreferrer">
         <button
           class="group bg-[var(--brand-teal)] text-white px-6 py-3 rounded-full font-semibold shadow-xl hover:bg-[#166963] hover:scale-105 transition-all duration-300 hover:shadow-[0_0_20px_1a767faa] flex items-center gap-2">
@@ -1022,13 +1021,7 @@
                 d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM7.5 8.98H12v2.08h.07c.62-1.17 2.13-2.4 4.43-2.4 4.74 0 5.61 3.1 5.61 7.13V24H17v-6.65c0-1.59-.03-3.64-2.22-3.64-2.22 0-2.56 1.73-2.56 3.52V24H7.5V8.98z" />
             </svg>
           </a>
-          <a href="https://www.facebook.com/mirajocollective" target="_blank" rel="noopener noreferrer"
-            class="hover:text-[#1a767f] transition" aria-label="Facebook">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M22.675 0H1.326C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.326 24H12.82v-9.294H9.692V11.13h3.127V8.41c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.919.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.587l-.467 3.576h-3.12V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .593 23.406 0 22.675 0z" />
-            </svg>
-          </a>
+        
           <a href="https://wa.me/17274859941" target="_blank" rel="noopener noreferrer"
             class="hover:text-[#1a767f] transition" aria-label="WhatsApp">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
