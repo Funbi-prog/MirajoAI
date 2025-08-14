@@ -150,6 +150,16 @@
                 <a href="https://app.mirajo.ai/" target="_blank" class="block hover:text-[#1a767f] transition">Client
                     Login</a>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const toggleButton = document.getElementById('menu-toggle');
+                    const mobileMenu = document.getElementById('mobile-menu');
+
+                    toggleButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                });
+            </script>
 
     </header>
     <section class="relative px-6 py-12 bg-gray-50">
@@ -158,7 +168,7 @@
             <div class="w-full md:w-1/3 sticky top-24">
                 <video autoplay muted loop class="rounded-xl shadow-lg w-full object-cover" style="height: 280px;">
                     <source
-                        src="video/20250805_1116_Futuristic Tech Leader_simple_compose_01k1wvqm5xf8ns77prd4wfsgjq.mp4"
+                        src="video/herp.mp4"
                         type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -355,99 +365,102 @@
                 →</a>
         </div>
     </section>
-   <!-- Newsletter CTA Section -->
-<section class="w-full bg-gradient-to-r from-[#0a0a0a] to-[#1a767f] px-6 py-12 text-white font-[Montserrat]"
-    data-aos="fade-up">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        <!-- Text -->
-        <div>
-            <h3 class="text-2xl md:text-3xl font-bold leading-snug mb-4">
-                Join 3,000+ local business owners using automation to save time and serve more customers.
-            </h3>
-            <p class="text-base md:text-lg text-white/90">
-                Every week, we show you how real businesses automate the chaos. Quick read. Big results.
-            </p>
+    <!-- Newsletter CTA Section -->
+    <section class="w-full bg-gradient-to-r from-[#0a0a0a] to-[#1a767f] px-6 py-12 text-white font-[Montserrat]"
+        data-aos="fade-up">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+            <!-- Text -->
+            <div>
+                <h3 class="text-2xl md:text-3xl font-bold leading-snug mb-4">
+                    Join 3,000+ local business owners using automation to save time and serve more customers.
+                </h3>
+                <p class="text-base md:text-lg text-white/90">
+                    Every week, we show you how real businesses automate the chaos. Quick read. Big results.
+                </p>
+            </div>
+
+            <!-- Newsletter Form -->
+            <div class="w-full overflow-hidden rounded-xl shadow-lg border border-white/20">
+                <iframe src="https://api.leadconnectorhq.com/widget/form/XjtNPj5puaSllr5sF5Rt"
+                    class="w-full min-h-[500px] md:min-h-[700px] rounded-xl" style="border: none; overflow: hidden;"
+                    scrolling="no" id="inline-XjtNPj5puaSllr5sF5Rt" title="Newsletter Form">
+                </iframe>
+            </div>
         </div>
 
-        <!-- Newsletter Form -->
-        <div class="w-full overflow-hidden rounded-xl shadow-lg border border-white/20">
-            <iframe src="https://api.leadconnectorhq.com/widget/form/XjtNPj5puaSllr5sF5Rt"
-                class="w-full min-h-[500px] md:min-h-[700px] rounded-xl"
-                style="border: none; overflow: hidden;" scrolling="no"
-                id="inline-XjtNPj5puaSllr5sF5Rt" title="Newsletter Form">
-            </iframe>
-        </div>
-    </div>
+        <!-- Embed Script -->
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
-    <!-- Embed Script -->
-    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
-    <!-- Dynamic Height Adjustment -->
-    <script>
-        window.addEventListener('message', function (event) {
-            if (event.origin.includes('leadconnectorhq.com')) {
-                const data = event.data;
-                if (typeof data === 'object' && data.height && data.type === 'hsFormCallback') {
-                    const iframe = document.getElementById('inline-XjtNPj5puaSllr5sF5Rt');
-                    if (iframe) {
-                        iframe.style.height = `${data.height}px`;
+        <!-- Dynamic Height Adjustment -->
+        <script>
+            window.addEventListener('message', function (event) {
+                if (event.origin.includes('leadconnectorhq.com')) {
+                    const data = event.data;
+                    if (typeof data === 'object' && data.height && data.type === 'hsFormCallback') {
+                        const iframe = document.getElementById('inline-XjtNPj5puaSllr5sF5Rt');
+                        if (iframe) {
+                            iframe.style.height = `${data.height}px`;
+                        }
                     }
                 }
-            }
-        });
-    </script>
-</section>
+            });
+        </script>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-white text-black py-10 px-4 shadow-md mt-10">
-    <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
+    <!-- Footer -->
+    <footer class="bg-white text-black py-10 px-4 shadow-md mt-10">
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
 
-        <!-- Social + Email Icons -->
-        <div class="flex flex-wrap justify-center gap-6">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/mirajoai" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5..."/>
-                </svg>
-            </a>
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/company/mirajo-ai/" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88..."/>
-                </svg>
-            </a>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/mirajocollective" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22.675 0H1.326C.593 0 0 .593 0 1.326..."/>
-                </svg>
-            </a>
-            <!-- WhatsApp -->
-            <a href="https://wa.me/17274859941" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.52 3.48A11.87 11.87 0 0012.03 0..."/>
-                </svg>
-            </a>
-            <!-- Email -->
-            <a href="mailto:hello@ai.mirajoco.org" class="hover:text-[#1a767f] transition">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.2..."/>
-                </svg>
-            </a>
+            <!-- Social + Email Icons -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/mirajoai" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-[#1a767f] transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5..." />
+                    </svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/mirajo-ai/" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-[#1a767f] transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88..." />
+                    </svg>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/mirajocollective" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-[#1a767f] transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.675 0H1.326C.593 0 0 .593 0 1.326..." />
+                    </svg>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/17274859941" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-[#1a767f] transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.52 3.48A11.87 11.87 0 0012.03 0..." />
+                    </svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:hello@ai.mirajoco.org" class="hover:text-[#1a767f] transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.2..." />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Privacy & Terms -->
+            <div class="flex items-center justify-center gap-4 text-sm font-medium">
+                <a href="/privacy" class="text-[#1a767f] hover:underline">Privacy Policy</a>
+                <span class="text-gray-400">|</span>
+                <a href="/terms" class="text-[#1a767f] hover:underline">Terms of Service</a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-sm text-gray-500">
+                &copy; 2025 Mirajo Collective. All rights reserved.
+            </div>
         </div>
-
-        <!-- Privacy & Terms -->
-        <div class="flex items-center justify-center gap-4 text-sm font-medium">
-            <a href="/privacy" class="text-[#1a767f] hover:underline">Privacy Policy</a>
-            <span class="text-gray-400">|</span>
-            <a href="/terms" class="text-[#1a767f] hover:underline">Terms of Service</a>
-        </div>
-
-        <!-- Copyright -->
-        <div class="text-sm text-gray-500">
-            &copy; 2025 Mirajo Collective. All rights reserved.
-        </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
