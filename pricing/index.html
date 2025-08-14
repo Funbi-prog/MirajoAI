@@ -67,64 +67,44 @@
 
 <body class="bg-white text-black">
 
-    <!-- ✅ NAVBAR START -->
-    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="/" class="transition-transform duration-300 hover:scale-105">
-                <img src="img/nav.png" alt="MirajoAI Logo"
-                    class="h-20 w-20 object-contain shadow-none bg-transparent border-none"
-                    style="background: transparent; box-shadow: none; border: none;"   />
-            </a>
+ <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="transition-transform duration-300 hover:scale-105">
+      <img src="img/nav.png" alt="MiRAjO AI Logo"
+           class="h-20 w-20 object-contain shadow-none bg-transparent border-none" />
+    </a>
 
-            <!-- Desktop Nav -->
-            <nav class="space-x-8 hidden md:flex text-black text-base font-light">
-                <a href="/" class="hover:text-[#1a767f] transition-colors duration-200">Home</a>
-                <a href="https://home.mirajoco.org/" class="hover:text-[#1a767f] transition-colors duration-200">MiRAjO
-                    Collective</a>
-                <a href="https://app.mirajo.ai/" class="hover:text-[#1a767f] transition-colors duration-200">Client
-                    Login</a>
-                <a href="/blog/index.html" class="block px-6 py-3 font-medium hover:bg-gray-50">Blog</a>
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8 text-black text-base font-light">
+      <a href="/" class="hover:text-[#1a767f] transition-colors duration-200">Home</a>
+      <a href="https://home.mirajoco.org/" class="hover:text-[#1a767f] transition-colors duration-200">MiRAjO Collective</a>
+      <a href="https://app.mirajo.ai/" class="hover:text-[#1a767f] transition-colors duration-200">Client Login</a>
+      <a href="/blog/index.html" class="hover:text-[#1a767f] transition-colors duration-200">Blog</a>
+    </nav>
 
-            </nav>
+    <!-- Mobile Toggle -->
+    <button id="menu-toggle"
+            class="md:hidden p-2 text-black focus:outline-none"
+            aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
 
-            <!-- Mobile Toggle -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-black focus:outline-none">
-                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu"
-                class="md:hidden hidden px-6 pb-6 pt-4 space-y-3 text-black text-base font-bold bg-white border-t border-gray-200">
-                <a href="/" class="block hover:text-[#1a767f] transition">Home</a>
-                <a href="https://login.mirajoagency.org/" target="_blank"
-                    class="block hover:text-[#1a767f] transition">Client Login</a>
-                <a href="https://home.mirajoco.org/" class="block hover:text-[#1a767f] transition">MiRAjO Collective</a>
-                <a href="/blog/index.html" class="block px-6 py-3 font-medium hover:bg-gray-50">Blog</a>
-
-            </div>
-
-    </header>
-
-  <!-- Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggleButton = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      toggleButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex'); // ensure it shows up
-        const isOpen = !mobileMenu.classList.contains('hidden');
-        toggleButton.setAttribute('aria-expanded', isOpen);
-      });
-    });
-  </script>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+       class="md:hidden hidden px-6 pb-6 pt-4 space-y-3 text-black text-base font-medium bg-white border-t border-gray-200">
+    <a href="/" class="block hover:text-[#1a767f] transition">Home</a>
+    <a href="https://app.mirajo.ai/" class="block hover:text-[#1a767f] transition">Client Login</a>
+    <a href="https://home.mirajoco.org/" class="block hover:text-[#1a767f] transition">MiRAjO Collective</a>
+    <a href="/blog/index.html" class="block hover:text-[#1a767f] transition">Blog</a>
+  </div>
+</header>
+  <!-- ✅ NAVBAR END -->
+ 
 
 
 
@@ -974,19 +954,6 @@
     </div>
   </section>
 
-  <!-- Scripts -->
-  <script>
-    // Mobile menu
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-    // Plan toggle
-    document.getElementById('planToggle').addEventListener('change', () => {
-      document.getElementById('monthlyPlans').classList.toggle('hidden');
-      document.getElementById('annualPlans').classList.toggle('hidden');
-    });
-  </script>
-
   <!-- Help Section -->
   <section class="py-16 fade-up">
     <h2 class="text-4xl font-light text-center mb-6">Need help deciding?</h2>
@@ -1067,6 +1034,32 @@
       </div>
     </footer>
   </div>
+  <script>
+  (function () {
+    // --- Mobile menu toggle ---
+    var btn  = document.getElementById('menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', function () {
+        var willOpen = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');           // show/hide
+        btn.setAttribute('aria-expanded', String(willOpen));
+      });
+    }
+
+    // --- Pricing plan toggle (Monthly / Annual) ---
+    var planToggle   = document.getElementById('planToggle');
+    var monthlyPlans = document.getElementById('monthlyPlans');
+    var annualPlans  = document.getElementById('annualPlans');
+    if (planToggle && monthlyPlans && annualPlans) {
+      planToggle.addEventListener('change', function () {
+        monthlyPlans.classList.toggle('hidden');
+        annualPlans.classList.toggle('hidden');
+      });
+    }
+  })();
+</script>
+
 </body>
 
 </html>
