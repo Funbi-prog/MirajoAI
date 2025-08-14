@@ -66,41 +66,50 @@
 </head>
 
 <body class="bg-white text-black">
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="/" class="transition-transform duration-300 hover:scale-105">
-        <img src="/img/nav.png" alt="MirajoAI Logo"
-          class="h-20 w-20 object-contain shadow-none bg-transparent border-none" />
-      </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <a href="/" class="hover:text-[var(--brand-teal)] transition">Home</a>
-        <a href="https://home.mirajoco.org/" class="hover:text-[var(--brand-teal)] transition">MiRAjO Collective</a>
-        <a href="https://app.mirajo.ai/" class="hover:text-[var(--brand-teal)] transition">Client Login</a>
-        <a href="/blog" class="hover:text-[var(--brand-teal)] transition">Blog</a>
-      </nav>
+    <!-- ✅ NAVBAR START -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="transition-transform duration-300 hover:scale-105">
+                <img src="img/nav.png" alt="MirajoAI Logo"
+                    class="h-20 w-20 object-contain shadow-none bg-transparent border-none"
+                    style="background: transparent; box-shadow: none; border: none;"   />
+            </a>
 
-      <!-- Hamburger -->
-      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none" aria-label="Open menu"
-        aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
+            <!-- Desktop Nav -->
+            <nav class="space-x-8 hidden md:flex text-black text-base font-light">
+                <a href="/" class="hover:text-[#1a767f] transition-colors duration-200">Home</a>
+                <a href="https://home.mirajoco.org/" class="hover:text-[#1a767f] transition-colors duration-200">MiRAjO
+                    Collective</a>
+                <a href="https://app.mirajo.ai/" class="hover:text-[#1a767f] transition-colors duration-200">Client
+                    Login</a>
+                <a href="/blog/index.html" class="block px-6 py-3 font-medium hover:bg-gray-50">Blog</a>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden flex-col md:hidden bg-white border-t border-gray-200">
-      <a href="/" class="block px-6 py-3 font-medium hover:bg-gray-50">Home</a>
-      <a href="https://home.mirajoco.org/" class="block px-6 py-3 font-medium hover:bg-gray-50">MiRAjO Collective</a>
-      <a href="https://app.mirajo.ai/" class="block px-6 py-3 font-medium hover:bg-gray-50">Client Login</a>
-      <a href="/blog" class="block px-6 py-3 font-medium hover:bg-gray-50">Blog</a>
-    </div>
-  </header>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-black focus:outline-none">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="md:hidden hidden px-6 pb-6 pt-4 space-y-3 text-black text-base font-bold bg-white border-t border-gray-200">
+                <a href="/" class="block hover:text-[#1a767f] transition">Home</a>
+                <a href="https://login.mirajoagency.org/" target="_blank"
+                    class="block hover:text-[#1a767f] transition">Client Login</a>
+                <a href="https://home.mirajoco.org/" class="block hover:text-[#1a767f] transition">MiRAjO Collective</a>
+                <a href="/blog/index.html" class="block px-6 py-3 font-medium hover:bg-gray-50">Blog</a>
+
+            </div>
+
+    </header>
 
   <!-- Script -->
   <script>
