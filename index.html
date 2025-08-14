@@ -153,22 +153,6 @@
     </header>
     <!-- ✅ NAVBAR END -->
 
-    <script>
-        // Mobile menu toggle
-        (function () {
-            const btn = document.getElementById('menu-toggle');
-            const menu = document.getElementById('mobile-menu');
-
-            if (!btn || !menu) return;
-
-            btn.addEventListener('click', () => {
-                const isOpen = !menu.classList.contains('hidden');
-                menu.classList.toggle('hidden');
-                btn.setAttribute('aria-expanded', String(!isOpen));
-            });
-        })();
-    </script>
-
     <section
         class="relative w-full bg-white text-black overflow-hidden min-h-screen flex items-center justify-center px-6 py-24">
 
@@ -2192,17 +2176,7 @@
     </script>
 
     <!-- ✅ Mobile Nav Toggle -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const toggle = document.getElementById("menu-toggle");
-            const menu = document.getElementById("mobile-menu");
-            if (toggle && menu) {
-                toggle.addEventListener("click", () => {
-                    menu.classList.toggle("hidden");
-                });
-            }
-        });
-    </script>
+   
     <script src="https://widgets.leadconnectorhq.com/loader.js"
         data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
         data-widget-id="67ef608a8e8aa7de36f311a5">
@@ -2292,8 +2266,39 @@
             </div>
         </footer>
     </div>
-
     </section>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    if (!btn || !menu) return;
+
+    const toggle = () => {
+      const isHidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", String(isHidden));
+    };
+
+    btn.addEventListener("click", toggle);
+
+    // Close on link click (nice for mobile UX)
+    menu.addEventListener("click", (e) => {
+      if (e.target.closest("a")) {
+        menu.classList.add("hidden");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !menu.classList.contains("hidden")) {
+        menu.classList.add("hidden");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+</script>
+
 </body>
 
 </html>
