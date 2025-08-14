@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MirajoAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <style>
+        @keyframes glowUp {
+            0% {
+                transform: translateY(10px) scale(1);
+                opacity: 0.25;
+            }
+
+            50% {
+                transform: translateY(-10px) scale(1.05);
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: translateY(10px) scale(1);
+                opacity: 0.25;
+            }
+        }
+
+        .animate-glowUpSlow {
+            animation: glowUp 12s ease-in-out infinite;
+        }
+
+        .animate-glowUpSlower {
+            animation: glowUp 18s ease-in-out infinite;
+        }
+
+        @keyframes fadeSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeSlideIn {
+            animation: fadeSlideIn 1s ease-out forwards;
+        }
+
+        @keyframes floatWave {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .float-wave {
+            animation: floatWave 3s ease-in-out infinite;
+        }
+
+        .typewriter::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+    <style>
+        @keyframes fadeInUpCenter {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.97);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black">
+
+    <!-- ✅ NAVBAR START -->
+    <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="transition-transform duration-300 hover:scale-105">
+                <img src="img/nav.png" alt="MirajoAI Logo"
+                    class="h-20 w-20 object-contain shadow-none bg-transparent border-none"
+                    style="background: transparent; box-shadow: none; border: none;"   />
+            </a>
+
+            <!-- Desktop Nav -->
+            <!-- Desktop Navigation -->
+            <nav class="space-x-8 hidden md:flex text-black text-base font-light">
+                <a href="/" class="hover:text-[#1a767f] transition-colors duration-200">Home</a>
+                <a href="/pricing" class="hover:text-[#1a767f] transition-colors duration-200">Pricing</a>
+                <a href="https://home.mirajoco.org/" class="hover:text-[#1a767f] transition-colors duration-200">MiRAjO
+                    Collective</a>
+                <a href="https://app.mirajo.ai/" target="_blank"
+                    class="hover:text-[#1a767f] transition-colors duration-200">Client Login</a>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-black focus:outline-none">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="md:hidden hidden px-6 pb-6 pt-4 space-y-3 text-black text-base font-medium bg-white border-t border-gray-200">
+                <a href="/" class="block hover:text-[#1a767f] transition">Home</a>
+                <a href="/pricing" class="block hover:text-[#1a767f] transition">Pricing</a>
+                <a href="https://home.mirajoco.org/" class="block hover:text-[#1a767f] transition">MiRAjO Collective</a>
+                <a href="https://app.mirajo.ai/" target="_blank" class="block hover:text-[#1a767f] transition">Client
+                    Login</a>
+            </div>
+
+    </header>
+    <section class="relative px-6 py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between">
+            <!-- Fixed Video Card -->
+            <div class="w-full md:w-1/3 sticky top-24">
+                <video autoplay muted loop class="rounded-xl shadow-lg w-full object-cover" style="height: 280px;">
+                    <source
+                        src="video/20250805_1116_Futuristic Tech Leader_simple_compose_01k1wvqm5xf8ns77prd4wfsgjq.mp4"
+                        type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Blog Teaser Text -->
+            <div class="w-full md:w-2/3 mt-10 md:mt-0 md:pl-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">
+                    <span id="typewriter" class="typewriter text-[#1a767f]">Automate the Chaos. Scale with Soul.</span>
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    The MiRAjO blog is where code meets connection — your go-to hub for automation, systems,
+                    productivity, and the future of AI-powered collaboration.
+                </p>
+                <a href="#latest"
+                    class="inline-block bg-[#1a767f] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#155a5f] transition">
+                    Read the Latest Stories →
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const phrases = [
+            "Automate the Chaos.",
+            "Scale with Soul.",
+            "Build smarter systems.",
+            "Lead with logic and alignment."
+        ];
+        let i = 0;
+        let j = 0;
+        let currentPhrase = [];
+        let isDeleting = false;
+        let isEnd = false;
+
+        function loop() {
+            isEnd = false;
+            const display = document.getElementById('typewriter');
+
+            display.innerHTML = currentPhrase.join('');
+
+            if (i < phrases.length) {
+                if (!isDeleting && j <= phrases[i].length) {
+                    currentPhrase.push(phrases[i][j]);
+                    j++;
+                    display.innerHTML = currentPhrase.join('');
+                }
+
+                if (isDeleting && j <= phrases[i].length) {
+                    currentPhrase.pop();
+                    j--;
+                    display.innerHTML = currentPhrase.join('');
+                }
+
+                if (j == phrases[i].length) {
+                    isEnd = true;
+                    isDeleting = true;
+                }
+
+                if (isDeleting && j === 0) {
+                    currentPhrase = [];
+                    isDeleting = false;
+                    i++;
+                    if (i === phrases.length) {
+                        i = 0;
+                    }
+                }
+            }
+            const spedUp = Math.random() * (80 - 50) + 50;
+            const normalSpeed = Math.random() * (250 - 200) + 200;
+            const time = isEnd ? 1000 : isDeleting ? spedUp : normalSpeed;
+            setTimeout(loop, time);
+        }
+
+        loop();
+    </script>
+
+    <!-- Add this inside <body> right before </body> -->
+    <!-- ✅ Newsletter + AOS Setup + Gradient Magic -->
+
+
+
+    <!-- ✅ AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false, // Trigger every time
+            duration: 1000,
+        });
+    </script>
+    <!-- ✅ BLOG POSTS SECTION -->
+    <section id="latest" class="relative px-6 py-20 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#1a767f] mb-14 leading-snug" data-aos="zoom-in">
+                From Smart Code to Real Results
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- 🧠 Blog Card 1 -->
+                <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+                    <img src="img/crm1.jpg" alt="Chat Automation"
+                        class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a767f] mb-2">Chat Automation That Converts</h3>
+                        <p class="text-sm text-gray-700 mb-4">How MiRAjO AI handles leads so you don’t have to. Set
+                            boundaries with bots — not burnout.</p>
+                        <a href="/blog/chat-automation.html"
+                            class="text-sm font-medium text-[#1a767f] hover:underline">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- ⚙️ Blog Card 2 -->
+                <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+                    <img src="img/2.jpg" alt="Scaling with Systems"
+                        class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a767f] mb-2">Scaling with Systems, Not Stress</h3>
+                        <p class="text-sm text-gray-700 mb-4">Practical ways to use AI to grow without burnout. For the
+                            solopreneurs doing it all.</p>
+                        <a href="/blog/scaling-with-ai.html"
+                            class="text-sm font-medium text-[#1a767f] hover:underline">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- 🌍 Blog Card 3 -->
+                <div class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+                    <img src="img/people-office-work-day.jpg" alt="AI for Teams"
+                        class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a767f] mb-2">Is Your Team Ready for AI?</h3>
+                        <p class="text-sm text-gray-700 mb-4">Culture shifts, mindset resets, and how to prep your team
+                            to grow with tech — not fear it.</p>
+                        <a href="/blog/team-ready-ai.html"
+                            class="text-sm font-medium text-[#1a767f] hover:underline">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ SIDEBAR SECTION -->
+    <aside class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-10" data-aos="fade-up">
+        <!-- Newsletter Opt-In -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition md:col-span-1">
+            <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">📬 Stay in the Loop</h4>
+            <p class="text-sm text-gray-700 mb-4">Weekly drops on automation, growth tools & AI hacks? Straight to your
+                inbox.</p>
+            <form class="space-y-3">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full px-4 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#1a767f]" />
+                <button type="submit"
+                    class="w-full bg-[#1a767f] text-white py-2 rounded-md text-sm hover:bg-[#155a5f] transition">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Trending Tags -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition md:col-span-1">
+            <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">🔥 Trending Topics</h4>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-[#e6f4f3] px-3 py-1 rounded-full text-sm text-[#1a767f]">Automation</span>
+                <span class="bg-[#e6f4f3] px-3 py-1 rounded-full text-sm text-[#1a767f]">Solopreneur</span>
+                <span class="bg-[#e6f4f3] px-3 py-1 rounded-full text-sm text-[#1a767f]">AI Tools</span>
+                <span class="bg-[#e6f4f3] px-3 py-1 rounded-full text-sm text-[#1a767f]">Scaling</span>
+                <span class="bg-[#e6f4f3] px-3 py-1 rounded-full text-sm text-[#1a767f]">Smart Systems</span>
+            </div>
+        </div>
+
+        <!-- Pro Tip Box -->
+        <div
+            class="bg-gradient-to-br from-[#1a767f] to-[#145a5f] text-white p-6 rounded-xl shadow-xl float-wave md:col-span-1">
+            <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">💡 Pro Tip</h4>
+            <p class="text-sm text-white/90 leading-relaxed">
+                Don’t just automate tasks — automate trust. Let your AI follow through while you focus on strategy.
+            </p>
+        </div>
+    </aside>
+
+    <section class="grid md:grid-cols-3 gap-8 px-6 pb-16 max-w-7xl mx-auto">
+        <div class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2 text-[#1a767f]">Chat Automation That Converts</h3>
+            <p class="text-gray-600 mb-4 text-sm">How MiRAjO AI handles leads so you don’t have to.</p>
+            <a href="/blog/chat-automation.html" class="text-[#1a767f] text-sm font-medium hover:underline">Read More
+                →</a>
+        </div>
+        <div class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2 text-[#1a767f]">Scaling with Systems, Not Stress</h3>
+            <p class="text-gray-600 mb-4 text-sm">Practical ways to use AI to grow without burnout.</p>
+            <a href="/blog/scaling-with-ai.html" class="text-[#1a767f] text-sm font-medium hover:underline">Read More
+                →</a>
+        </div>
+        <div class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2 text-[#1a767f]">Is Your Team Ready for AI?</h3>
+            <p class="text-gray-600 mb-4 text-sm">Culture shifts, mindset tips, and real-life examples.</p>
+            <a href="/blog/team-ready-ai.html" class="text-[#1a767f] text-sm font-medium hover:underline">Read More
+                →</a>
+        </div>
+    </section>
+   <!-- Newsletter CTA Section -->
+<section class="w-full bg-gradient-to-r from-[#0a0a0a] to-[#1a767f] px-6 py-12 text-white font-[Montserrat]"
+    data-aos="fade-up">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+        <!-- Text -->
+        <div>
+            <h3 class="text-2xl md:text-3xl font-bold leading-snug mb-4">
+                Join 3,000+ local business owners using automation to save time and serve more customers.
+            </h3>
+            <p class="text-base md:text-lg text-white/90">
+                Every week, we show you how real businesses automate the chaos. Quick read. Big results.
+            </p>
+        </div>
+
+        <!-- Newsletter Form -->
+        <div class="w-full overflow-hidden rounded-xl shadow-lg border border-white/20">
+            <iframe src="https://api.leadconnectorhq.com/widget/form/XjtNPj5puaSllr5sF5Rt"
+                class="w-full min-h-[500px] md:min-h-[700px] rounded-xl"
+                style="border: none; overflow: hidden;" scrolling="no"
+                id="inline-XjtNPj5puaSllr5sF5Rt" title="Newsletter Form">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Embed Script -->
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+    <!-- Dynamic Height Adjustment -->
+    <script>
+        window.addEventListener('message', function (event) {
+            if (event.origin.includes('leadconnectorhq.com')) {
+                const data = event.data;
+                if (typeof data === 'object' && data.height && data.type === 'hsFormCallback') {
+                    const iframe = document.getElementById('inline-XjtNPj5puaSllr5sF5Rt');
+                    if (iframe) {
+                        iframe.style.height = `${data.height}px`;
+                    }
+                }
+            }
+        });
+    </script>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white text-black py-10 px-4 shadow-md mt-10">
+    <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
+
+        <!-- Social + Email Icons -->
+        <div class="flex flex-wrap justify-center gap-6">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/mirajoai" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5..."/>
+                </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/mirajo-ai/" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88..."/>
+                </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/mirajocollective" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22.675 0H1.326C.593 0 0 .593 0 1.326..."/>
+                </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/17274859941" target="_blank" rel="noopener noreferrer" class="hover:text-[#1a767f] transition">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.52 3.48A11.87 11.87 0 0012.03 0..."/>
+                </svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:hello@ai.mirajoco.org" class="hover:text-[#1a767f] transition">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.2..."/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Privacy & Terms -->
+        <div class="flex items-center justify-center gap-4 text-sm font-medium">
+            <a href="/privacy" class="text-[#1a767f] hover:underline">Privacy Policy</a>
+            <span class="text-gray-400">|</span>
+            <a href="/terms" class="text-[#1a767f] hover:underline">Terms of Service</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-sm text-gray-500">
+            &copy; 2025 Mirajo Collective. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
